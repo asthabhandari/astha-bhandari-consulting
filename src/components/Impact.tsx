@@ -10,11 +10,6 @@ const Impact = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-5xl font-normal">OUR IMPACT</h2>
-          <Button asChild variant="outline" className="border-black text-black hover:bg-black hover:text-white rounded-none">
-            <Link to="/testimonials" className="flex items-center gap-2">
-              REAL STORIES <ArrowRight size={20} />
-            </Link>
-          </Button>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

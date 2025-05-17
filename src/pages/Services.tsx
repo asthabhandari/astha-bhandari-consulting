@@ -3,7 +3,6 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
-import Impact from "../components/Impact";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -51,8 +50,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-      
-      <Impact />
       
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4 text-center">
