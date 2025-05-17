@@ -2,6 +2,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from 'lucide-react';
 
 const Testimonials = () => {
   return (
@@ -35,7 +37,7 @@ const Testimonials = () => {
             </div>
           </div>
           
-          <div className="space-y-16">
+          <div className="space-y-16 mb-16">
             {/* Original Testimonial screenshots */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-4">
@@ -85,6 +87,171 @@ const Testimonials = () => {
                   className="w-full h-auto"
                 />
               </div>
+            </div>
+          </div>
+          
+          {/* Real People Real Results section - styled after the sample image */}
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-normal tracking-wider mb-12 text-white">REAL PEOPLE. REAL RESULTS.</h2>
+            
+            {/* Student Story 1 - Ayush */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+              <div className="flex items-center justify-end md:order-2">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/526ad95e-20eb-4290-9dc3-52f0e3124b9d.png" 
+                    alt="Ayush - Northeastern Student" 
+                    className="max-h-[500px]"
+                  />
+                  <div className="absolute bottom-20 -left-20 md:-left-24 w-32 h-32 md:w-36 md:h-36">
+                    <img 
+                      src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
+                      alt="Northeastern University Logo" 
+                      className="w-full h-full object-contain"
+                      style={{ objectPosition: "-270px 90px", objectFit: "none", transform: "scale(0.3)" }}
+                    />
+                  </div>
+                  <div className="absolute -bottom-16 -left-20 rotate-[-30deg]">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10,50 Q30,10 50,50 T90,50" stroke="#f89cb0" strokeWidth="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="text-white md:pr-12 md:order-1">
+                <p className="text-2xl mb-4">Ayush came to us in 9th grade, feeling overwhelmed by high school.</p>
+                <p className="text-xl mb-6">Through the Long-Term Consulting package, we helped him launch a club, build an investment project, and run a social media page – all of which helped him earn admission to his dream school: Northeastern.</p>
+              </div>
+            </div>
+            
+            {/* Student Story 2 - Neha */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+              <div className="flex items-center justify-start">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/16ed3930-d7d3-48f5-8078-ae962c8d3558.png" 
+                    alt="Neha - Duke Student" 
+                    className="max-h-[500px]"
+                  />
+                  <div className="absolute bottom-20 -right-20 md:-right-24 w-32 h-32 md:w-36 md:h-36">
+                    <img 
+                      src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
+                      alt="Duke University Logo" 
+                      className="w-full h-full object-contain"
+                      style={{ objectPosition: "-496px 90px", objectFit: "none", transform: "scale(0.3)" }}
+                    />
+                  </div>
+                  <div className="absolute -bottom-16 -right-20 rotate-[30deg]">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10,50 Q30,10 50,50 T90,50" stroke="#f89cb0" strokeWidth="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="text-white md:pl-12">
+                <p className="text-2xl mb-4">Neha had strong extracurriculars but struggled with writing.</p>
+                <p className="text-xl mb-6">We helped her transform her essays into a story that was authentic, personal, and unforgettable – earning her a spot at Duke.</p>
+              </div>
+            </div>
+            
+            {/* Student Story 3 - Leon */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+              <div className="flex items-center justify-end md:order-2">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/c798137d-965b-47fe-977d-f56c1590897d.png" 
+                    alt="Leon - UPenn Student" 
+                    className="max-h-[500px]"
+                  />
+                  <div className="absolute bottom-20 -left-20 md:-left-24 w-32 h-32 md:w-36 md:h-36">
+                    <img 
+                      src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
+                      alt="UPenn Logo" 
+                      className="w-full h-full object-contain"
+                      style={{ objectPosition: "-1220px 90px", objectFit: "none", transform: "scale(0.3)" }}
+                    />
+                  </div>
+                  <div className="absolute -bottom-16 -left-20 rotate-[-30deg]">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10,50 Q30,10 50,50 T90,50" stroke="#f89cb0" strokeWidth="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="text-white md:pr-12 md:order-1">
+                <p className="text-2xl mb-4">Leon found ABC after searching for a college consultancy that actually cares about their clients.</p>
+                <p className="text-xl mb-6">We worked with him week after week on his essays, and even prepped him for interviews. He is now attending UPenn!</p>
+              </div>
+            </div>
+            
+            {/* Student Story 4 - Nicole */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+              <div className="flex items-center justify-start">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/236a9790-a5a1-41cc-9c3a-141eff360897.png" 
+                    alt="Nicole - Berkeley Student" 
+                    className="max-h-[500px]"
+                  />
+                  <div className="absolute bottom-20 -right-20 md:-right-24 w-32 h-32 md:w-36 md:h-36">
+                    <img 
+                      src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
+                      alt="UC Berkeley Logo" 
+                      className="w-full h-full object-contain"
+                      style={{ objectPosition: "-754px 90px", objectFit: "none", transform: "scale(0.3)" }}
+                    />
+                  </div>
+                  <div className="absolute -bottom-16 -right-20 rotate-[30deg]">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10,50 Q30,10 50,50 T90,50" stroke="#f89cb0" strokeWidth="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="text-white md:pl-12">
+                <p className="text-2xl mb-4">Nicole (not pictured) came to us through a referral with one clear goal: UC Berkeley.</p>
+                <p className="text-xl mb-6">Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.</p>
+                <p className="text-xl">Now she's exactly where she dreamed of being: UC Berkeley.</p>
+              </div>
+            </div>
+            
+            {/* Student Story 5 - Kimberly */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+              <div className="flex items-center justify-end md:order-2">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/e3984685-94ba-4747-ad7e-f2835dc02b44.png" 
+                    alt="Kimberly - Stanford Student" 
+                    className="max-h-[500px]"
+                  />
+                  <div className="absolute bottom-20 -left-20 md:-left-24 w-32 h-32 md:w-36 md:h-36">
+                    <img 
+                      src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
+                      alt="Stanford University Logo" 
+                      className="w-full h-full object-contain"
+                      style={{ objectPosition: "-1010px 90px", objectFit: "none", transform: "scale(0.3)" }}
+                    />
+                  </div>
+                  <div className="absolute -bottom-16 -left-20 rotate-[-30deg]">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10,50 Q30,10 50,50 T90,50" stroke="#f89cb0" strokeWidth="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="text-white md:pr-12 md:order-1">
+                <p className="text-2xl mb-4">Kimberly and her family found us while working with another consultancy.</p>
+                <p className="text-xl mb-6">They came to ABC for someone who cares – and got it. We helped her revise her original application into something she loved. She's now an incoming Stanford student!</p>
+              </div>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="flex justify-center mt-16">
+              <Button asChild className="bg-[#4CA86B] hover:bg-[#4CA86B]/90 text-white text-lg px-8 py-6 h-auto">
+                <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  BOOK A CALL NOW <ExternalLink size={20} />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
