@@ -2,7 +2,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Impact from '../components/Impact';
 
 const Testimonials = () => {
   return (
@@ -13,12 +12,41 @@ const Testimonials = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-normal tracking-wider mb-12 text-white">SUCCESS STORIES</h2>
           
+          {/* Impact statistics in corners */}
+          <div className="fixed top-32 left-4 md:left-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl">40</div>
+              <div>mentorships</div>
+            </div>
+          </div>
+          
+          <div className="fixed top-32 right-4 md:right-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl">26</div>
+              <div>dream acceptances</div>
+            </div>
+          </div>
+          
+          <div className="fixed bottom-32 left-4 md:left-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl">54</div>
+              <div>scholarships</div>
+            </div>
+          </div>
+          
+          <div className="fixed bottom-32 right-4 md:right-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl">100%</div>
+              <div>success</div>
+            </div>
+          </div>
+          
           <div className="space-y-16">
-            {/* Testimonial screenshots */}
+            {/* New Testimonial screenshots */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/3e5a4679-1e9f-460a-a3ac-f6a0cee14d11.png" 
+                  src="/lovable-uploads/715043b8-9cdf-496b-907e-31895ce1b662.png" 
                   alt="Testimonial - UPenn acceptance" 
                   className="w-full h-auto"
                 />
@@ -26,7 +54,7 @@ const Testimonials = () => {
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/af7d0e9d-0884-48b6-91d2-bfcc066a4123.png" 
+                  src="/lovable-uploads/f58d076c-0eb9-444e-82c0-31bec2f0ca32.png" 
                   alt="Testimonial - Thank you message" 
                   className="w-full h-auto"
                 />
@@ -34,7 +62,7 @@ const Testimonials = () => {
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/64afd46b-0847-4a70-9e9a-6e81ddb06092.png" 
+                  src="/lovable-uploads/0c213138-aec6-4e34-b90b-1e3e0f0a488c.png" 
                   alt="Testimonial - Northeastern acceptance" 
                   className="w-full h-auto"
                 />
@@ -42,7 +70,7 @@ const Testimonials = () => {
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/c53df84b-8259-46c2-ab5a-7aa6cbfaf465.png" 
+                  src="/lovable-uploads/bbabd240-049f-4367-bde3-2459384c986b.png" 
                   alt="Testimonial - Recommendation" 
                   className="w-full h-auto"
                 />
@@ -50,7 +78,7 @@ const Testimonials = () => {
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/23134334-9fca-4ac3-9f76-86b51e72f287.png" 
+                  src="/lovable-uploads/dc91a85f-9db4-4da1-8fde-f35fa80b2444.png" 
                   alt="Testimonial - Princeton acceptance" 
                   className="w-full h-auto"
                 />
@@ -58,25 +86,12 @@ const Testimonials = () => {
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/21353630-7cae-4a66-86a3-94c3755e5d20.png" 
+                  src="/lovable-uploads/e90ee1f8-3739-4581-859c-7d9b12652542.png" 
                   alt="Testimonial - Multiple acceptances" 
                   className="w-full h-auto"
                 />
               </div>
             </div>
-
-            <div className="py-12">
-              <h3 className="text-2xl md:text-3xl font-normal mb-8 text-white">Where Our Students Have Been Accepted</h3>
-              <div className="flex justify-center">
-                <img 
-                  src="/lovable-uploads/ef0b5219-e6f7-4efd-a542-db8b6a37e9dc.png" 
-                  alt="University acceptances" 
-                  className="w-64 h-auto"
-                />
-              </div>
-            </div>
-            
-            <Impact />
           </div>
         </div>
       </section>
