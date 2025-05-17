@@ -7,7 +7,6 @@ import { Menu, X } from 'lucide-react';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const isImpactPage = location.pathname === "/impact";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

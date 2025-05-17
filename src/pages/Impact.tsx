@@ -2,8 +2,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
@@ -55,11 +53,7 @@ const CollegeMarquee = ({ colleges }: { colleges: CollegeInfo[] }) => {
         {extendedColleges.map((college, index) => (
           <div 
             key={index}
-            className={cn(
-              "flex flex-col items-center justify-center px-8",
-              "transition-all duration-200 hover:scale-105",
-              "min-w-[180px] cursor-pointer",
-            )}
+            className="flex flex-col items-center justify-center px-8 min-w-[180px]"
           >
             {/* College Logo */}
             <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center mb-3 overflow-hidden">
@@ -97,15 +91,20 @@ const Impact = () => {
       <section className="pt-32 pb-16 bg-white text-black">
         <div className="container mx-auto px-4">
           {/* Impact statistics in row at the top with bigger font */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24 mb-16">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24 mb-16">
+            {/* Left side word cloud image */}
+            <div className="hidden md:block">
+              <img 
+                src="/lovable-uploads/b1b392c0-c004-451b-b54b-61866b6d97b2.png" 
+                alt="Student names word cloud" 
+                className="h-[200px] w-auto"
+              />
+            </div>
+            
+            {/* Reordered statistics as requested */}
             <div className="text-[#f89cb0] text-center">
               <div className="text-5xl md:text-7xl font-['Garet']">100%</div>
               <div className="font-light text-xl">success</div>
-            </div>
-            
-            <div className="text-[#f89cb0] text-center">
-              <div className="text-5xl md:text-7xl font-['Garet']">40</div>
-              <div className="font-light text-xl">mentorships</div>
             </div>
             
             <div className="text-[#f89cb0] text-center">
@@ -116,6 +115,20 @@ const Impact = () => {
             <div className="text-[#f89cb0] text-center">
               <div className="text-5xl md:text-7xl font-['Garet']">54</div>
               <div className="font-light text-xl">scholarships</div>
+            </div>
+            
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-5xl md:text-7xl font-['Garet']">40</div>
+              <div className="font-light text-xl">mentorships</div>
+            </div>
+            
+            {/* Right side pin image */}
+            <div className="hidden md:block">
+              <img 
+                src="/lovable-uploads/51e52982-8346-406b-8b87-acc33f9a42bb.png" 
+                alt="College names location pin" 
+                className="h-[200px] w-auto"
+              />
             </div>
           </div>
         </div>
@@ -296,17 +309,6 @@ const Impact = () => {
               />
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* CTA Button */}
-      <section className="py-16 bg-black text-white">
-        <div className="flex justify-center">
-          <Button asChild className="bg-[#4CA86B] hover:bg-[#4CA86B]/90 text-white text-lg px-8 py-6 h-auto">
-            <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              BOOK A CALL NOW <ExternalLink size={20} />
-            </a>
-          </Button>
         </div>
       </section>
       
