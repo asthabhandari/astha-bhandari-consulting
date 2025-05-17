@@ -15,28 +15,28 @@ const Testimonials = () => {
           {/* Impact statistics in row at the top with bigger font */}
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24 mb-16">
             <div className="text-[#f89cb0] text-center">
-              <div className="text-4xl md:text-6xl font-normal">100%</div>
+              <div className="text-5xl md:text-7xl font-['Garet']">100%</div>
               <div className="font-light text-xl">success</div>
             </div>
             
             <div className="text-[#f89cb0] text-center">
-              <div className="text-4xl md:text-6xl font-normal">40</div>
+              <div className="text-5xl md:text-7xl font-['Garet']">40</div>
               <div className="font-light text-xl">mentorships</div>
             </div>
             
             <div className="text-[#f89cb0] text-center">
-              <div className="text-4xl md:text-6xl font-normal">26</div>
+              <div className="text-5xl md:text-7xl font-['Garet']">26</div>
               <div className="font-light text-xl">dream acceptances</div>
             </div>
             
             <div className="text-[#f89cb0] text-center">
-              <div className="text-4xl md:text-6xl font-normal">54</div>
+              <div className="text-5xl md:text-7xl font-['Garet']">54</div>
               <div className="font-light text-xl">scholarships</div>
             </div>
           </div>
           
           <div className="space-y-16">
-            {/* Updated Testimonial screenshots */}
+            {/* Original Testimonial screenshots */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-4">
                 <img 
