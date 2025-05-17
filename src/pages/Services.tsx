@@ -40,24 +40,13 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {services.map((service, index) => (
-              <div key={index} className="space-y-6">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="w-64 h-64 object-contain mx-auto"
-                />
-                <h3 className={`text-2xl md:text-3xl font-normal underline`} style={{ color: service.color }}>
-                  {service.title}
-                </h3>
-                <p className="text-xl md:text-2xl font-normal">
-                  {service.description}
-                </p>
-                <Button asChild variant="link" className="text-[#f89cb0] p-0 hover:text-[#f89cb0]/80">
-                  <Link to="#" className="flex items-center gap-2 text-lg">
-                    Learn More <ArrowRight size={20} />
-                  </Link>
-                </Button>
-              </div>
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+                color={service.color}
+                image={service.image}
+              />
             ))}
           </div>
         </div>
