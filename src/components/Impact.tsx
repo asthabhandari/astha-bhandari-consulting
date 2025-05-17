@@ -21,19 +21,19 @@ const Impact = () => {
           <div className="flex justify-center">
             <div className="max-w-full">
               <img 
-                src="/lovable-uploads/44261243-3412-4efb-a7f2-1f43b6c080e6.png" 
-                alt="Success messages" 
+                src="/lovable-uploads/a2462042-053f-4f2d-9109-0950021114ba.png" 
+                alt="Graduate names" 
                 className="w-full h-auto"
               />
             </div>
           </div>
           
           <div className="flex justify-center">
-            <div className="flex space-x-8">
+            <div className="max-w-full">
               <img 
-                src="/lovable-uploads/a03198cc-7596-4022-9a5c-14ab4cd80ff4.png" 
-                alt="Graduate names" 
-                className="w-auto h-64"
+                src="/lovable-uploads/a41a2dfb-c0c4-4ee9-97d0-f5d858bc9685.png" 
+                alt="College names" 
+                className="w-full h-auto"
               />
             </div>
           </div>
