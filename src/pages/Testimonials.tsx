@@ -12,37 +12,31 @@ const Testimonials = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-normal tracking-wider mb-12 text-white">SUCCESS STORIES</h2>
           
-          {/* Impact statistics in corners */}
-          <div className="fixed top-32 left-4 md:left-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl">40</div>
-              <div>mentorships</div>
+          {/* Impact statistics in row at the top */}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24 mb-16">
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-3xl md:text-4xl font-normal">100%</div>
+              <div className="font-light">success</div>
             </div>
-          </div>
-          
-          <div className="fixed top-32 right-4 md:right-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl">26</div>
-              <div>dream acceptances</div>
+            
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-3xl md:text-4xl font-normal">40</div>
+              <div className="font-light">mentorships</div>
             </div>
-          </div>
-          
-          <div className="fixed bottom-32 left-4 md:left-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl">54</div>
-              <div>scholarships</div>
+            
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-3xl md:text-4xl font-normal">26</div>
+              <div className="font-light">dream acceptances</div>
             </div>
-          </div>
-          
-          <div className="fixed bottom-32 right-4 md:right-8 text-[#f89cb0] text-xl md:text-2xl font-bold">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl">100%</div>
-              <div>success</div>
+            
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-3xl md:text-4xl font-normal">54</div>
+              <div className="font-light">scholarships</div>
             </div>
           </div>
           
           <div className="space-y-16">
-            {/* New Testimonial screenshots */}
+            {/* Testimonial screenshots */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-4">
                 <img 
