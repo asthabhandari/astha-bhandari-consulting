@@ -9,9 +9,10 @@ interface ServiceCardProps {
   description: string;
   color: string;
   image: string;
+  link: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, color, image }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, color, image, link }) => {
   return (
     <div className="flex flex-col items-center space-y-6 text-center">
       <div className="h-40 flex items-center justify-center">
@@ -28,7 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, color, im
         {description}
       </p>
       <Button asChild variant="link" className="text-[#f89cb0] p-0 hover:text-[#f89cb0]/80">
-        <Link to="#" className="flex items-center gap-2 text-lg">
+        <Link to={link} className="flex items-center gap-2 text-lg">
           Learn More <ArrowRight size={20} />
         </Link>
       </Button>

@@ -13,19 +13,22 @@ const Services = () => {
       title: "LONG TERM COLLEGE CONSULTING",
       description: "Not sure how to make high school count?",
       color: "#f89cb0", // Pink color
-      image: "/lovable-uploads/ca70cf13-69da-4478-bd4b-acdff09d9db7.png" // Mentoring icon
+      image: "/lovable-uploads/ca70cf13-69da-4478-bd4b-acdff09d9db7.png", // Mentoring icon
+      link: "/consulting"
     },
     {
       title: "COLLEGE ESSAYS",
       description: "What if your child's story could change everything?",
-      color: "#cefa86", // Using the lime green color from existing design
-      image: "/lovable-uploads/26f11a20-76bf-427c-a667-19e313568527.png" // Book/essay icon
+      color: "#f89cb0", // Using the pink color consistently as requested
+      image: "/lovable-uploads/26f11a20-76bf-427c-a667-19e313568527.png", // Book/essay icon
+      link: "/essays"
     },
     {
       title: "MENTORSHIP OPPORTUNITIES",
       description: "Not thinking of college yet?",
-      color: "#cefa86", // Using the lime green color from existing design
-      image: "/lovable-uploads/8009a80e-0b42-4a68-a05e-d609a1fde3fd.png" // Accepted student icon
+      color: "#f89cb0", // Using the pink color consistently as requested
+      image: "/lovable-uploads/8009a80e-0b42-4a68-a05e-d609a1fde3fd.png", // Accepted student icon
+      link: "/mentorship"
     }
   ];
 
@@ -45,6 +48,7 @@ const Services = () => {
                 description={service.description}
                 color={service.color}
                 image={service.image}
+                link={service.link}
               />
             ))}
           </div>
