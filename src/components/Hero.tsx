@@ -39,11 +39,11 @@ const Hero = () => {
           </div>
           
           <div className="lg:w-1/2 space-y-6 text-white">
-            <p className="text-base md:text-lg font-light">
+            <p className="text-lg md:text-xl font-light">
               With 7+ years of experience mentoring students – and 4 years guiding them into Stanford, IvyLeague, Duke, and other T20 schools – ABC helps high schoolers unlock their voice and shape unforgettable stories.
             </p>
               
-            <p className="text-base md:text-lg font-light">
+            <p className="text-lg md:text-xl font-light">
               Because great stories open doors that SAT scores alone never could.
             </p>
           </div>
