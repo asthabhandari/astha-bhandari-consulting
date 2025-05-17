@@ -50,7 +50,14 @@ const About = () => {
       
       {/* Parents image positioned at the bottom edge of the page with text beside it */}
       <div className="absolute bottom-0 right-0 flex items-center">
-        <span className="text-sm font-light text-white mr-4">PROUD PARENTS</span>
+        <div className="flex items-center">
+          <span className="text-sm font-light text-white mr-4">PROUD PARENTS</span>
+          <img 
+            src="/lovable-uploads/665ac1e8-7ce9-453f-9238-05e6e9cb905b.png"
+            alt="Arrow pointing to parents" 
+            className="w-24 h-auto mr-2"
+          />
+        </div>
         <img 
           src="/lovable-uploads/a01d1c46-6558-4a25-86e0-34e1e7e94aa6.png"
           alt="Proud parents" 
