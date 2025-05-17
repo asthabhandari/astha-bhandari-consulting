@@ -68,11 +68,6 @@ const Testimonials = () => {
           {/* Student Stories Carousel */}
           <ScrollArea className="w-full">
             <div className="relative">
-              <div className="flex justify-center gap-6 mb-8">
-                <CarouselPrevious className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-14 w-14" />
-                <CarouselNext className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-14 w-14" />
-              </div>
-              
               <Carousel 
                 opts={{
                   align: "center",
@@ -80,6 +75,11 @@ const Testimonials = () => {
                   containScroll: false,
                 }}
                 className="w-full">
+                <div className="flex justify-center gap-6 mb-8">
+                  <CarouselPrevious className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-14 w-14" />
+                  <CarouselNext className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-14 w-14" />
+                </div>
+                
                 <CarouselContent className="py-12">
                   {/* Student Story 1 - Ayush */}
                   <CarouselItem className="md:basis-3/4 lg:basis-2/3">
