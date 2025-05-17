@@ -69,7 +69,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Garet', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
