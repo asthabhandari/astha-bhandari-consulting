@@ -29,11 +29,11 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ title, sections }) => {
       
       <section className="pt-32 pb-16">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-normal tracking-wide">{title}</h1>
-            <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-base font-normal tracking-wider">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 gap-8">
+            <h1 className="text-5xl md:text-7xl font-normal tracking-wide">{title}</h1>
+            <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-lg md:text-xl font-normal tracking-wider">
               <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                BOOK A CALL NOW <ArrowRight size={20} />
+                BOOK A CALL NOW <ArrowRight size={24} />
               </a>
             </Button>
           </div>
@@ -43,17 +43,17 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ title, sections }) => {
               {sections.map((section, index) => (
                 <CarouselItem key={index} className="md:basis-full px-4">
                   <div className="p-6">
-                    <h2 className="text-3xl md:text-4xl font-normal mb-8">{section.title}</h2>
-                    <div className="text-lg md:text-xl">
+                    <h2 className="text-4xl md:text-5xl font-normal mb-10">{section.title}</h2>
+                    <div className="text-xl md:text-2xl leading-relaxed">
                       {section.content}
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center gap-2 mt-8">
-              <CarouselPrevious className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black" />
-              <CarouselNext className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black" />
+            <div className="flex justify-center gap-4 mt-12">
+              <CarouselPrevious className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-12 w-12" />
+              <CarouselNext className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-12 w-12" />
             </div>
           </Carousel>
         </div>
@@ -61,10 +61,10 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ title, sections }) => {
       
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-normal mb-8">Ready to take the next step?</h2>
-          <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-base font-normal tracking-wider">
-            <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              BOOK A CALL <ArrowRight size={20} />
+          <h2 className="text-4xl md:text-5xl font-normal mb-10">Ready to take the next step?</h2>
+          <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-10 py-8 h-auto text-lg md:text-xl font-normal tracking-wider">
+            <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+              BOOK A CALL <ArrowRight size={24} />
             </a>
           </Button>
         </div>

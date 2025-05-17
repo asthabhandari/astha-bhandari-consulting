@@ -3,66 +3,74 @@ import React from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
 const LongTermConsulting = () => {
-  const serviceSections = [
+  const sections = [
     {
-      title: "Start Early. Stand Out.",
+      title: "COMPREHENSIVE GUIDANCE",
       content: (
         <div className="space-y-6">
           <p>
-            We work with students starting as early as 8th or 9th grade – building a thoughtful, strategic, and authentic profile every step of the way.
+            Our long-term college consulting program begins as early as 8th grade, providing students with a strategic roadmap tailored to their unique strengths, interests, and aspirations. We believe in building a foundation for success over time, not just cramming for applications in senior year.
           </p>
           <p>
-            From summer programs to leadership opportunities, we help students make choices now that pay off later.
+            Through personalized guidance, we help students craft their academic journey, select challenging but appropriate courses, and develop extracurricular activities that showcase their passions and leadership abilities.
+          </p>
+          <p>
+            Our consultants have decades of experience navigating the ever-changing landscape of college admissions, ensuring that your child's application stands out in an increasingly competitive environment.
           </p>
         </div>
-      )
+      ),
     },
     {
-      title: "Here's What We Help With",
+      title: "ACADEMIC EXCELLENCE",
       content: (
         <div className="space-y-6">
-          <div className="flex gap-4 items-start">
-            <span className="font-bold">→</span>
-            <p>Course selection and academic planning</p>
-          </div>
-          <div className="flex gap-4 items-start">
-            <span className="font-bold">→</span>
-            <p>Leadership and passion project guidance</p>
-          </div>
-          <div className="flex gap-4 items-start">
-            <span className="font-bold">→</span>
-            <p>Summer program & extracurricular strategy</p>
-          </div>
-          <div className="flex gap-4 items-start">
-            <span className="font-bold">→</span>
-            <p>Essay prep warmups starting junior year</p>
-          </div>
-          <div className="flex gap-4 items-start">
-            <span className="font-bold">→</span>
-            <p>Personalized timeline + check-ins every semester</p>
-          </div>
+          <p>
+            We meticulously plan each student's academic trajectory, recommending specific courses that align with their college goals while also maximizing their GPA and class rank. This includes strategic AP, IB, or honors course selection based on the student's strengths and target colleges.
+          </p>
+          <p>
+            Our team monitors academic performance throughout high school, addressing any concerns before they become obstacles to college acceptance. We provide resources for academic support when needed and recommend enrichment opportunities that go beyond the classroom.
+          </p>
+          <p>
+            Regular check-ins ensure that students stay on track with their academic goals, adjusting strategies as needed to maintain excellence while avoiding burnout.
+          </p>
         </div>
-      )
+      ),
     },
     {
-      title: "We've Seen It Work",
+      title: "EXTRACURRICULAR DEVELOPMENT",
       content: (
         <div className="space-y-6">
           <p>
-            Ayush's parents came to us with fear and excitement about high school.
+            The most successful applicants demonstrate depth, not just breadth, in their activities. We help students identify and cultivate their authentic interests, guiding them to meaningful opportunities that showcase their initiative and impact.
           </p>
           <p>
-            We worked with him from 9th grade – helping him grow from a quiet student into a confident leader.
+            From summer programs and internships to research opportunities and community service, we connect students with experiences that both enrich their high school years and strengthen their applications.
           </p>
           <p>
-            He got into Northeastern, his dream school, after launching a coding curriculum abroad with our guidance.
+            We emphasize leadership development, helping students create or expand passion projects that demonstrate their ability to effect change and take initiative—qualities highly valued by admissions committees.
           </p>
         </div>
-      )
-    }
+      ),
+    },
+    {
+      title: "COLLEGE SELECTION STRATEGY",
+      content: (
+        <div className="space-y-6">
+          <p>
+            Finding the right college fit goes beyond rankings and reputation. Our consultants conduct thorough assessments of each student's preferences, learning style, career aspirations, and personality to develop a customized list of target schools.
+          </p>
+          <p>
+            We employ sophisticated matching algorithms combined with decades of institutional knowledge to identify colleges where students will not only gain admission but also thrive academically, socially, and personally.
+          </p>
+          <p>
+            Our guidance includes strategically categorizing schools into reach, target, and likely options, ensuring that students apply to a balanced list that maximizes their opportunities for acceptance and financial aid.
+          </p>
+        </div>
+      ),
+    },
   ];
 
-  return <ServiceDetail title="LONG TERM COLLEGE CONSULTING" sections={serviceSections} />;
+  return <ServiceDetail title="LONG TERM COLLEGE CONSULTING" sections={sections} />;
 };
 
 export default LongTermConsulting;

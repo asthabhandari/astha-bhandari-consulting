@@ -35,7 +35,7 @@ const Navigation = () => {
               About Us
             </Link>
             <Link to="/testimonials" className="text-white hover:text-[#f89cb0] transition-colors">
-              Success Stories
+              Our Impact
             </Link>
           </div>
 
@@ -85,7 +85,7 @@ const Navigation = () => {
               className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
-              Success Stories
+              Our Impact
             </Link>
             <a
               href="https://calendly.com/asthabhandari/quick-chat"
