@@ -23,17 +23,17 @@ const Footer = () => {
             <h4 className="text-lg font-light mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
+                <Link to="/consulting" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
                   Long-Term Consulting
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
+                <Link to="/essays" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
                   College Essays
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
+                <Link to="/mentorship" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
                   Mentorship Program
                 </Link>
               </li>
@@ -73,7 +73,6 @@ const Footer = () => {
             <address className="not-italic text-gray-300 space-y-2">
               <p>San Francisco Bay Area</p>
               <p>California, USA</p>
-              <p>contact@asthabhandari.com</p>
             </address>
             <div className="mt-4">
               <a 

@@ -21,8 +21,8 @@ const Impact = () => {
           <div className="flex justify-center">
             <div className="max-w-full">
               <img 
-                src="/lovable-uploads/a2462042-053f-4f2d-9109-0950021114ba.png" 
-                alt="Graduate names" 
+                src="/lovable-uploads/20c41b2c-2df0-4058-a0cf-3eeae07cec63.png" 
+                alt="Graduate student names word cloud" 
                 className="w-full h-auto"
               />
             </div>
@@ -31,8 +31,8 @@ const Impact = () => {
           <div className="flex justify-center">
             <div className="max-w-full">
               <img 
-                src="/lovable-uploads/a41a2dfb-c0c4-4ee9-97d0-f5d858bc9685.png" 
-                alt="College names" 
+                src="/lovable-uploads/a4d37063-0be1-42db-9d11-5b2839c7d780.png" 
+                alt="College names word cloud" 
                 className="w-full h-auto"
               />
             </div>

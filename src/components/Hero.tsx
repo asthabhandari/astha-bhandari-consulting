@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="pt-8">
               <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-base flex items-center gap-2 font-normal tracking-wider">
                 <Link to="/about" className="flex items-center gap-2">
-                  LEARN MORE ABOUT US <ArrowRight size={28} strokeWidth={1.5} />
+                  LEARN MORE ABOUT US <ArrowRight size={36} strokeWidth={1.5} />
                 </Link>
               </Button>
             </div>
