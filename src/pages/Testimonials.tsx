@@ -19,14 +19,14 @@ const Testimonials = () => {
       <Navigation />
       
       {/* Impact statistics section with black background */}
-      <section className="pt-32 pb-16 bg-black text-white">
+      <section className="pt-32 pb-16 bg-white text-black">
         <div className="container mx-auto px-4">
           {/* Impact statistics in row at the top with bigger font */}
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24 mb-16">
             <div className="flex items-center gap-6">
               <img 
-                src="/lovable-uploads/a2462042-053f-4f2d-9109-0950021114ba.png" 
-                alt="Graduate names" 
+                src="/lovable-uploads/eeaa0327-ad1b-4b8d-8605-1e91dd0adfba.png" 
+                alt="Silhouette" 
                 className="w-32 h-auto hidden md:block"
               />
               <div className="text-[#f89cb0] text-center">
@@ -51,8 +51,8 @@ const Testimonials = () => {
                 <div className="font-light text-xl">scholarships</div>
               </div>
               <img 
-                src="/lovable-uploads/a41a2dfb-c0c4-4ee9-97d0-f5d858bc9685.png" 
-                alt="College names" 
+                src="/lovable-uploads/665ac1e8-7ce9-453f-9238-05e6e9cb905b.png" 
+                alt="Arrow" 
                 className="w-32 h-auto hidden md:block"
               />
             </div>
@@ -80,21 +80,11 @@ const Testimonials = () => {
                   <CarouselItem className="md:basis-3/4 lg:basis-2/3">
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-10 w-full flex justify-center">
-                        <div className="relative">
-                          <img 
-                            src="/lovable-uploads/526ad95e-20eb-4290-9dc3-52f0e3124b9d.png" 
-                            alt="Ayush - Northeastern Student" 
-                            className="h-[500px] w-auto mx-auto"
-                          />
-                          <div className="absolute bottom-0 left-0 w-24 h-24">
-                            <img 
-                              src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
-                              alt="Northeastern University Logo" 
-                              className="w-full h-full object-contain"
-                              style={{ objectPosition: "-270px 90px", objectFit: "none", transform: "scale(0.3)" }}
-                            />
-                          </div>
-                        </div>
+                        <img 
+                          src="/lovable-uploads/ce68d2e8-17b6-4b92-8f81-bb131c07e312.png" 
+                          alt="Northeastern University Student" 
+                          className="h-[600px] w-auto mx-auto"
+                        />
                       </div>
                       <div className="text-white text-center max-w-2xl">
                         <p className="text-2xl mb-4 font-['Garet']">Ayush came to us in 9th grade, feeling overwhelmed by high school.</p>
@@ -107,21 +97,11 @@ const Testimonials = () => {
                   <CarouselItem className="md:basis-3/4 lg:basis-2/3">
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-10 w-full flex justify-center">
-                        <div className="relative">
-                          <img 
-                            src="/lovable-uploads/16ed3930-d7d3-48f5-8078-ae962c8d3558.png" 
-                            alt="Neha - Duke Student" 
-                            className="h-[500px] w-auto mx-auto"
-                          />
-                          <div className="absolute bottom-0 right-0 w-24 h-24">
-                            <img 
-                              src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
-                              alt="Duke University Logo" 
-                              className="w-full h-full object-contain"
-                              style={{ objectPosition: "-496px 90px", objectFit: "none", transform: "scale(0.3)" }}
-                            />
-                          </div>
-                        </div>
+                        <img 
+                          src="/lovable-uploads/330ef70d-710e-462c-bba4-6bc5c81515fa.png" 
+                          alt="Student" 
+                          className="h-[600px] w-auto mx-auto"
+                        />
                       </div>
                       <div className="text-white text-center max-w-2xl">
                         <p className="text-2xl mb-4 font-['Garet']">Neha had strong extracurriculars but struggled with writing.</p>
@@ -134,21 +114,11 @@ const Testimonials = () => {
                   <CarouselItem className="md:basis-3/4 lg:basis-2/3">
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-10 w-full flex justify-center">
-                        <div className="relative">
-                          <img 
-                            src="/lovable-uploads/c798137d-965b-47fe-977d-f56c1590897d.png" 
-                            alt="Leon - UPenn Student" 
-                            className="h-[500px] w-auto mx-auto"
-                          />
-                          <div className="absolute bottom-0 left-0 w-24 h-24">
-                            <img 
-                              src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
-                              alt="UPenn Logo" 
-                              className="w-full h-full object-contain"
-                              style={{ objectPosition: "-1220px 90px", objectFit: "none", transform: "scale(0.3)" }}
-                            />
-                          </div>
-                        </div>
+                        <img 
+                          src="/lovable-uploads/04c7e99d-25ee-4239-bfd0-79fda79b66ce.png" 
+                          alt="Student" 
+                          className="h-[600px] w-auto mx-auto"
+                        />
                       </div>
                       <div className="text-white text-center max-w-2xl">
                         <p className="text-2xl mb-4 font-['Garet']">Leon found ABC after searching for a college consultancy that actually cares about their clients.</p>
@@ -157,25 +127,15 @@ const Testimonials = () => {
                     </div>
                   </CarouselItem>
                   
-                  {/* Student Story 4 - Nicole */}
+                  {/* Student Story 4 - Nicole (using silhouette) */}
                   <CarouselItem className="md:basis-3/4 lg:basis-2/3">
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-10 w-full flex justify-center">
-                        <div className="relative">
-                          <img 
-                            src="/lovable-uploads/236a9790-a5a1-41cc-9c3a-141eff360897.png" 
-                            alt="Nicole - Berkeley Student" 
-                            className="h-[500px] w-auto mx-auto"
-                          />
-                          <div className="absolute bottom-0 right-0 w-24 h-24">
-                            <img 
-                              src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
-                              alt="UC Berkeley Logo" 
-                              className="w-full h-full object-contain"
-                              style={{ objectPosition: "-754px 90px", objectFit: "none", transform: "scale(0.3)" }}
-                            />
-                          </div>
-                        </div>
+                        <img 
+                          src="/lovable-uploads/eeaa0327-ad1b-4b8d-8605-1e91dd0adfba.png" 
+                          alt="Student Silhouette" 
+                          className="h-[600px] w-auto mx-auto"
+                        />
                       </div>
                       <div className="text-white text-center max-w-2xl">
                         <p className="text-2xl mb-4 font-['Garet']">Nicole (not pictured) came to us through a referral with one clear goal: UC Berkeley.</p>
@@ -189,21 +149,11 @@ const Testimonials = () => {
                   <CarouselItem className="md:basis-3/4 lg:basis-2/3">
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-10 w-full flex justify-center">
-                        <div className="relative">
-                          <img 
-                            src="/lovable-uploads/e3984685-94ba-4747-ad7e-f2835dc02b44.png" 
-                            alt="Kimberly - Stanford Student" 
-                            className="h-[500px] w-auto mx-auto"
-                          />
-                          <div className="absolute bottom-0 left-0 w-24 h-24">
-                            <img 
-                              src="/lovable-uploads/f8019a77-25c0-4e40-ad6a-b35d4502deeb.png" 
-                              alt="Stanford University Logo" 
-                              className="w-full h-full object-contain"
-                              style={{ objectPosition: "-1010px 90px", objectFit: "none", transform: "scale(0.3)" }}
-                            />
-                          </div>
-                        </div>
+                        <img 
+                          src="/lovable-uploads/2f7e0f7a-be5d-4ba2-b53d-9f9d44d4a63e.png" 
+                          alt="Stanford Student" 
+                          className="h-[600px] w-auto mx-auto"
+                        />
                       </div>
                       <div className="text-white text-center max-w-2xl">
                         <p className="text-2xl mb-4 font-['Garet']">Kimberly and her family found us while working with another consultancy.</p>
