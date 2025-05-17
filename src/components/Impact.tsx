@@ -1,21 +1,19 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 const Impact = () => {
   return (
-    <section className="py-20 bg-white text-black">
+    <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="space-y-8">
             <div className="flex flex-col">
-              <h3 className="text-7xl font-normal">40</h3>
+              <h3 className="text-7xl font-normal text-[#f89cb0] font-['Garet']">40</h3>
               <p className="text-xl">mentorships</p>
             </div>
             
             <div className="flex flex-col">
-              <h3 className="text-7xl font-normal">100%</h3>
+              <h3 className="text-7xl font-normal text-[#f89cb0] font-['Garet']">100%</h3>
               <p className="text-xl">success</p>
             </div>
           </div>
@@ -42,12 +40,12 @@ const Impact = () => {
           
           <div className="space-y-8">
             <div className="flex flex-col">
-              <h3 className="text-7xl font-normal">26</h3>
+              <h3 className="text-7xl font-normal text-[#f89cb0] font-['Garet']">26</h3>
               <p className="text-xl">dream acceptances</p>
             </div>
             
             <div className="flex flex-col">
-              <h3 className="text-7xl font-normal">54</h3>
+              <h3 className="text-7xl font-normal text-[#f89cb0] font-['Garet']">54</h3>
               <p className="text-xl">scholarships</p>
             </div>
           </div>
