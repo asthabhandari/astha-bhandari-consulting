@@ -12,74 +12,76 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { 
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 // College Grid Component
 type CollegeInfo = {
   name: string;
   description?: string;
+  logo?: string;
 };
 
 const collegesList: CollegeInfo[] = [
-  { name: "Stanford", description: "Class of 2025" },
-  { name: "Duke", description: "Full scholarship" },
-  { name: "Princeton", description: "Class of 2024" },
-  { name: "UNC Chapel Hill", description: "Class of 2025" },
-  { name: "NC State", description: "Class of 2023" },
-  { name: "Northeastern", description: "Merit scholarship" },
-  { name: "Northwestern", description: "Class of 2024" },
-  { name: "UPenn", description: "Class of 2023" },
-  { name: "UC Berkeley", description: "Class of 2025" },
-  { name: "UCLA", description: "Full scholarship" },
-  { name: "USC", description: "Class of 2024" },
-  { name: "UC Davis", description: "Merit scholarship" },
-  { name: "NYU", description: "Class of 2025" },
-  { name: "UMich", description: "Class of 2023" },
-  { name: "Amherst", description: "Class of 2024" },
-  { name: "Howard", description: "Full scholarship" },
-  { name: "Georgia Tech", description: "Class of 2025" },
-  { name: "Davidson", description: "Merit scholarship" },
-  { name: "Dartmouth", description: "Class of 2024" },
-  { name: "Wake Forest", description: "Class of 2023" },
+  { name: "Stanford", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png" },
+  { name: "Duke", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Duke_Athletics_logo.svg/1200px-Duke_Athletics_logo.svg.png" },
+  { name: "Princeton", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Princeton_shield.svg/1200px-Princeton_shield.svg.png" },
+  { name: "UNC Chapel Hill", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/North_Carolina_Tar_Heels_logo.svg/1200px-North_Carolina_Tar_Heels_logo.svg.png" },
+  { name: "NC State", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/North_Carolina_State_University_Athletic_logo.svg/1200px-North_Carolina_State_University_Athletic_logo.svg.png" },
+  { name: "Northeastern", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Northeastern_University_seal.svg/1200px-Northeastern_University_seal.svg.png" },
+  { name: "Northwestern", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Northwestern_Wildcats_logo.svg/1200px-Northwestern_Wildcats_logo.svg.png" },
+  { name: "UPenn", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UPenn_shield_with_banner.svg/1200px-UPenn_shield_with_banner.svg.png" },
+  { name: "UC Berkeley", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" },
+  { name: "UCLA", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/The_UCLA_Script.svg/1200px-The_UCLA_Script.svg.png" },
+  { name: "USC", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/USC_Trojans_logo.svg/1200px-USC_Trojans_logo.svg.png" },
+  { name: "UC Davis", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/University_of_California%2C_Davis_seal.svg/1200px-University_of_California%2C_Davis_seal.svg.png" },
+  { name: "NYU", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/New_York_University_seal.svg/1200px-New_York_University_seal.svg.png" },
+  { name: "UMich", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Michigan_Wolverines_Logo.svg/1200px-Michigan_Wolverines_Logo.svg.png" },
+  { name: "Amherst", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Amherst_College_seal.svg/1200px-Amherst_College_seal.svg.png" },
+  { name: "Howard", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Howard_University_seal.svg/1200px-Howard_University_seal.svg.png" },
+  { name: "Georgia Tech", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Georgia_Tech_seal.svg/1200px-Georgia_Tech_seal.svg.png" },
+  { name: "Davidson", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Davidson_College_seal.svg/1200px-Davidson_College_seal.svg.png" },
+  { name: "Dartmouth", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Dartmouth_College_shield.svg/1200px-Dartmouth_College_shield.svg.png" },
+  { name: "Wake Forest", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wake_Forest_University_Athletic_logo.svg/1200px-Wake_Forest_University_Athletic_logo.svg.png" },
 ];
 
 // Create a scrolling marquee component for the colleges
 const CollegeMarquee = ({ colleges }: { colleges: CollegeInfo[] }) => {
-  // Duplicate the colleges list to create a seamless loop effect
-  const extendedColleges = [...colleges, ...colleges];
+  // Duplicate the colleges list multiple times to create a seamless infinite loop effect
+  const extendedColleges = [...colleges, ...colleges, ...colleges];
   
   return (
-    <div className="w-full overflow-hidden bg-white py-8">
+    <div className="w-full overflow-hidden bg-black py-8">
       <div className="animate-marquee flex">
         {extendedColleges.map((college, index) => (
-          <TooltipProvider key={index}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div 
-                  className={cn(
-                    "flex flex-col items-center justify-center px-8",
-                    "transition-all duration-200 hover:scale-105",
-                    "min-w-[180px] cursor-pointer",
-                  )}
-                >
-                  {/* College Logo (Using first letter as placeholder) */}
-                  <div className="w-16 h-16 rounded-full bg-[#f89cb0] flex items-center justify-center mb-3 text-white text-2xl font-bold">
-                    {college.name.charAt(0)}
-                  </div>
-                  <span className="text-center font-['Garet'] text-black">{college.name}</span>
+          <div 
+            key={index}
+            className={cn(
+              "flex flex-col items-center justify-center px-8",
+              "transition-all duration-200 hover:scale-105",
+              "min-w-[180px] cursor-pointer",
+            )}
+          >
+            {/* College Logo */}
+            <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center mb-3 overflow-hidden">
+              {college.logo ? (
+                <img 
+                  src={college.logo} 
+                  alt={`${college.name} logo`} 
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMTJDMTQuNzYxNCAxMiAxNyA5Ljc2MTQyIDE3IDdDMTcgNC4yMzg1OCAxNC43NjE0IDIgMTIgMkM5LjIzODU4IDIgNyA0LjIzODU4IDcgN0M3IDkuNzYxNDIgOS4yMzg1OCAxMiAxMiAxMloiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE5LjkzMjMgMjAuOTIzN0MyMC40MjAyIDIxLjgzNjEgMjEuNTE5MyAyMi4xNzggMjIuMzQwOSAyMS42MTgzQzIzLjE3ODggMjEuMDQ4NCAyMy40NTA0IDE5Ljg5NzkgMjIuOTM2NSAxOS4wMDQzQzIxLjUzOTMgMTYuNjA1NSAxOS4yODMxIDE0Ljc0MSAxNi42MTczIDE0Ljg1NjJDMTUuODYzMiAxNC44OTU2IDE1LjI0ODUgMTUuNjI0NiAxNS4zNzg5IDE2LjM3MjNDMTUuODIzMiAxOC41NDU0IDE3LjM5MTYgMjAuMDc1MiAxOS4xMDg1IDIwLjk3MDlDMTkuNDIxOCAyMS4xMjE3IDE5LjY5MTkgMjEuMDY2OCAxOS45MzIzIDIwLjkyMzdaIiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTcuMzgyNjkgMjAuOTIzN0M2Ljg5NDgzIDIxLjgzNjEgNS43OTU2NiAyMi4xNzggNC45NzQxIDIxLjYxODNDNC4xMzYxNSAyMS4wNDg0IDMuODY0NTkgMTkuODk3OSA0LjM3ODUgMTkuMDA0M0M1Ljc3NTcxIDE2LjYwNTUgOC4wMzE4OCAxNC43NDEgMTAuNjk3NyAxNC44NTYyQzExLjQ1MTggMTQuODk1NiAxMi4wNjY1IDE1LjYyNDYgMTEuOTM2MSAxNi4zNzIzQzExLjQ5MTggMTguNTQ1NCA5LjkyMzM3IDIwLjA3NTIgOC4yMDY1MSAyMC45NzA5QzcuODkzMjIgMjEuMTIxNyA3LjYyMzA2IDIxLjA2NjggNy4zODI2OSAyMC45MjM3WiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==";
+                  }}
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-xl font-bold bg-[#f89cb0] text-white">
+                  {college.name.charAt(0)}
                 </div>
-              </TooltipTrigger>
-              <TooltipContent side="bottom" className="bg-[#f89cb0] text-white border-none">
-                <p>{college.description || "ABC Student"}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+              )}
+            </div>
+            <span className="text-center font-['Garet'] text-white">{college.name}</span>
+          </div>
         ))}
       </div>
     </div>
@@ -121,7 +123,7 @@ const Impact = () => {
       
       {/* College Marquee Section */}
       <section className="py-12 bg-black text-white">
-        <div className="w-full px-4">
+        <div className="w-full px-0">
           <h2 className="text-4xl md:text-5xl font-normal font-['Garet'] text-center mb-10">
             Where Our Students Got In
           </h2>

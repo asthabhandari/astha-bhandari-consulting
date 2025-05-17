@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -119,7 +118,7 @@
   }
 }
 
-/* Marquee animation for college logos */
+/* Marquee animation for college logos - twice the speed */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -130,7 +129,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 15s linear infinite;
   min-width: 100%;
   display: flex;
 }

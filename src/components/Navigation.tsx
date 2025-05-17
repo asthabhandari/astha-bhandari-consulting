@@ -14,7 +14,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 bg-transparent backdrop-blur-sm ${isImpactPage ? 'bg-black/50' : ''}`}>
+    <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo with conditional styling for About page */}
@@ -48,7 +48,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className={`${location.pathname === "/about" ? 'text-black' : 'text-white'}`}>
+            <button onClick={toggleMenu} className="text-white">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
