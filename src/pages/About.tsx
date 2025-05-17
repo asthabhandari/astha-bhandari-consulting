@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#f89cb0] text-black">
+    <div className="min-h-screen bg-[#f89cb0] text-white">
       <Navigation />
       
-      <section className="pt-32 pb-16 min-h-screen">
+      <section className="pt-32 pb-16 min-h-screen relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-light tracking-wider mb-12 text-black">WHO WE ARE</h2>
+          <h2 className="text-4xl md:text-5xl font-light tracking-wider mb-12 text-white">WHO WE ARE</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-5">
@@ -23,7 +23,7 @@ const About = () => {
               </div>
             </div>
             
-            <div className="lg:col-span-7 space-y-6 text-black">
+            <div className="lg:col-span-7 space-y-6 text-white">
               <p className="text-xl">
                 ABC was founded by Astha Bhandari – the proud daughter of immigrants, and an immigrant herself.
               </p>
@@ -43,18 +43,17 @@ const About = () => {
               <p className="text-xl">
                 Today, she brings that same insight, drive, and care to every student she works with – and maintains a 100% success rate helping students get into their dream schools.
               </p>
-              
-              <div className="flex justify-end mt-8">
-                <div className="text-right flex flex-col items-end">
-                  <img 
-                    src="/lovable-uploads/a01d1c46-6558-4a25-86e0-34e1e7e94aa6.png"
-                    alt="Proud parents" 
-                    className="w-56 h-auto mb-2"
-                  />
-                  <span className="text-sm font-light">PROUD PARENTS</span>
-                </div>
-              </div>
             </div>
+          </div>
+          
+          {/* Parents image positioned at the bottom right with text next to it */}
+          <div className="absolute bottom-16 right-16 flex items-center gap-4">
+            <span className="text-sm font-light text-white">PROUD PARENTS</span>
+            <img 
+              src="/lovable-uploads/a01d1c46-6558-4a25-86e0-34e1e7e94aa6.png"
+              alt="Proud parents" 
+              className="w-56 h-auto"
+            />
           </div>
         </div>
       </section>
