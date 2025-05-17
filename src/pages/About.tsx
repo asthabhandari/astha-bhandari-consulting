@@ -45,18 +45,18 @@ const About = () => {
               </p>
             </div>
           </div>
-          
-          {/* Parents image positioned at the bottom right with text next to it */}
-          <div className="absolute bottom-16 right-16 flex items-center gap-4">
-            <span className="text-sm font-light text-white">PROUD PARENTS</span>
-            <img 
-              src="/lovable-uploads/a01d1c46-6558-4a25-86e0-34e1e7e94aa6.png"
-              alt="Proud parents" 
-              className="w-56 h-auto"
-            />
-          </div>
         </div>
       </section>
+      
+      {/* Parents image positioned at the bottom edge of the page with text beside it */}
+      <div className="absolute bottom-0 right-0 flex items-center">
+        <span className="text-sm font-light text-white mr-4">PROUD PARENTS</span>
+        <img 
+          src="/lovable-uploads/a01d1c46-6558-4a25-86e0-34e1e7e94aa6.png"
+          alt="Proud parents" 
+          className="w-56 h-auto"
+        />
+      </div>
       
       <Footer />
     </div>

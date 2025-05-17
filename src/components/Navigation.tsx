@@ -1,11 +1,13 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isAboutPage = location.pathname === "/about";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -15,10 +17,10 @@ const Navigation = () => {
     <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo with conditional styling for About page */}
           <Link to="/" className="flex flex-col items-start">
-            <h1 className="text-xl font-light tracking-wider text-[#f89cb0]">A B C</h1>
-            <span className="text-xs text-white/70 font-light">Astha Bhandari Consulting</span>
+            <h1 className={`text-xl font-light tracking-wider ${isAboutPage ? 'text-black' : 'text-[#f89cb0]'}`}>A B C</h1>
+            <span className={`text-xs ${isAboutPage ? 'text-black' : 'text-white/70'} font-light`}>Astha Bhandari Consulting</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,7 +48,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white">
+            <button onClick={toggleMenu} className={`${isAboutPage ? 'text-black' : 'text-white'}`}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
