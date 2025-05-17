@@ -7,14 +7,14 @@ import { Menu, X } from 'lucide-react';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const isTestimonialsPage = location.pathname === "/testimonials";
+  const isImpactPage = location.pathname === "/impact";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className={`fixed w-full z-50 bg-transparent backdrop-blur-sm ${isTestimonialsPage ? 'bg-black/50' : ''}`}>
+    <nav className={`fixed w-full z-50 bg-transparent backdrop-blur-sm ${isImpactPage ? 'bg-black/50' : ''}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo with conditional styling for About page */}
@@ -34,7 +34,7 @@ const Navigation = () => {
             <Link to="/services" className="text-white hover:text-[#f89cb0] transition-colors">
               Services
             </Link>
-            <Link to="/testimonials" className="text-white hover:text-[#f89cb0] transition-colors">
+            <Link to="/impact" className="text-white hover:text-[#f89cb0] transition-colors">
               Our Impact
             </Link>
           </div>
@@ -81,7 +81,7 @@ const Navigation = () => {
               Services
             </Link>
             <Link 
-              to="/testimonials" 
+              to="/impact" 
               className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
