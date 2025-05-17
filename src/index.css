@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -116,4 +117,20 @@
   body {
     @apply bg-background text-foreground font-['Garet',sans-serif] font-light;
   }
+}
+
+/* Marquee animation for college logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  min-width: 100%;
+  display: flex;
 }
