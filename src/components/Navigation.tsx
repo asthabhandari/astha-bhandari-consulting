@@ -12,40 +12,40 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-gray-800">Ivy<span className="text-pink-500">Edge</span></h1>
+            <h1 className="text-xl font-light tracking-wider text-[#cefa86]">A B C</h1>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-800 hover:text-pink-500 transition-colors">
+            <Link to="/" className="text-white hover:text-[#f89cb0] transition-colors">
               Home
             </Link>
-            <Link to="/services" className="text-gray-800 hover:text-pink-500 transition-colors">
+            <Link to="/services" className="text-white hover:text-[#f89cb0] transition-colors">
               Services
             </Link>
-            <Link to="/about" className="text-gray-800 hover:text-pink-500 transition-colors">
+            <Link to="/about" className="text-white hover:text-[#f89cb0] transition-colors">
               About Us
             </Link>
-            <Link to="/testimonials" className="text-gray-800 hover:text-pink-500 transition-colors">
+            <Link to="/testimonials" className="text-white hover:text-[#f89cb0] transition-colors">
               Success Stories
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button asChild className="bg-pink-500 hover:bg-pink-600 text-white">
+            <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black">
               <Link to="/contact">Book a Call</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-800">
+            <button onClick={toggleMenu} className="text-white">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -54,39 +54,39 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-black/90 shadow-lg">
           <div className="px-2 pt-2 pb-4 space-y-1">
             <Link 
               to="/" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-pink-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/services" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-pink-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/about" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-pink-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
             <Link 
               to="/testimonials" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-pink-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Success Stories
             </Link>
             <Link
               to="/contact"
-              className="block px-3 py-2 rounded-md text-base font-medium bg-pink-500 text-white"
+              className="block px-3 py-2 rounded-md text-base font-medium bg-[#f89cb0] text-black"
               onClick={() => setIsMenuOpen(false)}
             >
               Book a Call
