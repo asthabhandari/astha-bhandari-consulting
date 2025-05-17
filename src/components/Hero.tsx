@@ -6,14 +6,11 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="pt-24 pb-16 min-h-screen flex items-center bg-black text-white">
-      <div className="container mx-auto px-4">
+    <section className="pt-24 pb-16 min-h-screen flex items-center bg-black text-white relative">
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 space-y-6">
-            <div className="inline-block text-[#cefa86] text-sm font-light tracking-wider mb-2">
-              A B C
-            </div>
-            
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-wide">
               GREAT<br />ESSAYS<br />DON'T WRITE<br />THEMSELVES.
             </h1>

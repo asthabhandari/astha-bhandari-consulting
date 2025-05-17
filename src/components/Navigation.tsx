@@ -16,8 +16,9 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <h1 className="text-xl font-light tracking-wider text-[#cefa86]">A B C</h1>
+          <Link to="/" className="flex flex-col items-start">
+            <h1 className="text-xl font-light tracking-wider text-[#f89cb0]">A B C</h1>
+            <span className="text-xs text-white/70 font-light">Astha Bhandari Consulting</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,7 +40,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black">
-              <Link to="/contact">Book a Call</Link>
+              <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer">Book a Call</a>
             </Button>
           </div>
 
@@ -84,13 +85,15 @@ const Navigation = () => {
             >
               Success Stories
             </Link>
-            <Link
-              to="/contact"
+            <a
+              href="https://calendly.com/asthabhandari/quick-chat"
+              target="_blank" 
+              rel="noopener noreferrer"
               className="block px-3 py-2 rounded-md text-base font-medium bg-[#f89cb0] text-black"
               onClick={() => setIsMenuOpen(false)}
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       )}

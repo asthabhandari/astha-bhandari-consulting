@@ -1,0 +1,84 @@
+
+import React from "react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import ServiceCard from "../components/ServiceCard";
+import Impact from "../components/Impact";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+const Services = () => {
+  const services = [
+    {
+      title: "LONG TERM COLLEGE CONSULTING",
+      description: "Not sure how to make high school count?",
+      color: "#f89cb0", // Pink color
+      image: "/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png" // Using the uploaded service icons image
+    },
+    {
+      title: "COLLEGE ESSAYS",
+      description: "What if your child's story could change everything?",
+      color: "#cefa86", // Using the lime green color from existing design
+      image: "/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png"
+    },
+    {
+      title: "MENTORSHIP OPPORTUNITIES",
+      description: "Not thinking of college yet?",
+      color: "#cefa86", // Using the lime green color from existing design
+      image: "/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Navigation />
+      
+      <section className="pt-32 pb-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl md:text-6xl font-normal mb-16 tracking-wide">HOW WE CAN HELP</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {services.map((service, index) => (
+              <div key={index} className="space-y-6">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-64 h-64 object-contain mx-auto"
+                />
+                <h3 className={`text-2xl md:text-3xl font-normal underline`} style={{ color: service.color }}>
+                  {service.title}
+                </h3>
+                <p className="text-xl md:text-2xl font-normal">
+                  {service.description}
+                </p>
+                <Button asChild variant="link" className="text-[#f89cb0] p-0 hover:text-[#f89cb0]/80">
+                  <Link to="#" className="flex items-center gap-2 text-lg">
+                    Learn More <ArrowRight size={20} />
+                  </Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <Impact />
+      
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-normal mb-8">Ready to take the next step?</h2>
+          <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-base font-normal tracking-wider">
+            <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              BOOK A CALL <ArrowRight size={20} />
+            </a>
+          </Button>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Services;

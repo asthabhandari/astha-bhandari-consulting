@@ -5,25 +5,25 @@ import Footer from '../components/Footer';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#f89cb0] text-white">
+    <div className="min-h-screen bg-[#f89cb0] text-black">
       <Navigation />
       
       <section className="pt-32 pb-16 min-h-screen">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-light tracking-wider mb-12">WHO WE ARE</h2>
+          <h2 className="text-4xl md:text-5xl font-light tracking-wider mb-12 text-black">WHO WE ARE</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-5">
               <div className="border-4 border-black transform -rotate-1">
                 <img 
-                  src="/lovable-uploads/b772e18f-6646-4fe3-bdac-58cc8eb7444b.png" 
+                  src="/lovable-uploads/e0be2613-5b22-4b88-a2a2-c54da891d7d1.png" 
                   alt="Astha at Stanford" 
                   className="w-full aspect-square object-cover"
                 />
               </div>
             </div>
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 text-black">
               <p className="text-xl">
                 ABC was founded by Astha Bhandari – the proud daughter of immigrants, and an immigrant herself.
               </p>
@@ -47,7 +47,7 @@ const About = () => {
               <div className="flex justify-end mt-8">
                 <div className="text-right flex flex-col items-end">
                   <img 
-                    src="/lovable-uploads/b772e18f-6646-4fe3-bdac-58cc8eb7444b.png"
+                    src="/lovable-uploads/a01d1c46-6558-4a25-86e0-34e1e7e94aa6.png"
                     alt="Proud parents" 
                     className="w-56 h-auto mb-2"
                   />

@@ -55,9 +55,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-[#f89cb0] transition-colors">
+                <a 
+                  href="https://calendly.com/asthabhandari/quick-chat" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-[#f89cb0] transition-colors"
+                >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -68,13 +73,17 @@ const Footer = () => {
             <address className="not-italic text-gray-300 space-y-2">
               <p>San Francisco Bay Area</p>
               <p>California, USA</p>
-              <p>contact@abc.com</p>
-              <p>(555) 123-4567</p>
+              <p>contact@asthabhandari.com</p>
             </address>
             <div className="mt-4">
-              <Link to="/contact" className="text-[#f89cb0] hover:underline font-light">
+              <a 
+                href="https://calendly.com/asthabhandari/quick-chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#f89cb0] hover:underline font-light"
+              >
                 Book a Free Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>
