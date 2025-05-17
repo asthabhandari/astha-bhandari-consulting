@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -23,16 +22,9 @@ const Testimonials = () => {
         <div className="container mx-auto px-4">
           {/* Impact statistics in row at the top with bigger font */}
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24 mb-16">
-            <div className="flex items-center gap-6">
-              <img 
-                src="/lovable-uploads/eeaa0327-ad1b-4b8d-8605-1e91dd0adfba.png" 
-                alt="Silhouette" 
-                className="w-32 h-auto hidden md:block"
-              />
-              <div className="text-[#f89cb0] text-center">
-                <div className="text-5xl md:text-7xl font-['Garet']">100%</div>
-                <div className="font-light text-xl">success</div>
-              </div>
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-5xl md:text-7xl font-['Garet']">100%</div>
+              <div className="font-light text-xl">success</div>
             </div>
             
             <div className="text-[#f89cb0] text-center">
@@ -45,16 +37,9 @@ const Testimonials = () => {
               <div className="font-light text-xl">dream acceptances</div>
             </div>
             
-            <div className="flex items-center gap-6">
-              <div className="text-[#f89cb0] text-center">
-                <div className="text-5xl md:text-7xl font-['Garet']">54</div>
-                <div className="font-light text-xl">scholarships</div>
-              </div>
-              <img 
-                src="/lovable-uploads/665ac1e8-7ce9-453f-9238-05e6e9cb905b.png" 
-                alt="Arrow" 
-                className="w-32 h-auto hidden md:block"
-              />
+            <div className="text-[#f89cb0] text-center">
+              <div className="text-5xl md:text-7xl font-['Garet']">54</div>
+              <div className="font-light text-xl">scholarships</div>
             </div>
           </div>
         </div>
@@ -75,7 +60,7 @@ const Testimonials = () => {
                   containScroll: false,
                 }}
                 className="w-full">
-                <div className="flex justify-center gap-6 mb-8">
+                <div className="flex justify-center gap-6 mt-[3cm] mb-8">
                   <CarouselPrevious className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-14 w-14" />
                   <CarouselNext className="relative inset-auto bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 hover:text-black h-14 w-14" />
                 </div>
@@ -137,7 +122,7 @@ const Testimonials = () => {
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-10 w-full flex justify-center">
                         <img 
-                          src="/lovable-uploads/eeaa0327-ad1b-4b8d-8605-1e91dd0adfba.png" 
+                          src="/lovable-uploads/0029e411-c275-49de-98d0-9c8697ca8c56.png" 
                           alt="Student Silhouette" 
                           className="h-[600px] w-auto mx-auto"
                         />
