@@ -93,12 +93,27 @@
   }
 }
 
+/* Add Garet font */
+@font-face {
+  font-family: 'Garet';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.cdnfonts.com/s/68565/Garet-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Garet';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.cdnfonts.com/s/68565/Garet-Heavy.woff') format('woff');
+}
+
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground font-['Inter',sans-serif] font-light;
+    @apply bg-background text-foreground font-['Garet',sans-serif] font-light;
   }
 }

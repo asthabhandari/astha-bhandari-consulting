@@ -17,7 +17,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, color, im
       <img 
         src={image} 
         alt={title}
-        className="w-64 h-64 object-contain mx-auto"
+        className="w-40 h-40 object-contain mx-auto"
       />
       <h3 className="text-2xl md:text-3xl font-normal underline" style={{ color }}>
         {title}

@@ -14,19 +14,19 @@ const Services = () => {
       title: "LONG TERM COLLEGE CONSULTING",
       description: "Not sure how to make high school count?",
       color: "#f89cb0", // Pink color
-      image: "/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png" // Using the uploaded service icons image
+      image: "/lovable-uploads/ca70cf13-69da-4478-bd4b-acdff09d9db7.png" // Mentoring icon
     },
     {
       title: "COLLEGE ESSAYS",
       description: "What if your child's story could change everything?",
       color: "#cefa86", // Using the lime green color from existing design
-      image: "/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png"
+      image: "/lovable-uploads/26f11a20-76bf-427c-a667-19e313568527.png" // Book/essay icon
     },
     {
       title: "MENTORSHIP OPPORTUNITIES",
       description: "Not thinking of college yet?",
       color: "#cefa86", // Using the lime green color from existing design
-      image: "/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png"
+      image: "/lovable-uploads/8009a80e-0b42-4a68-a05e-d609a1fde3fd.png" // Accepted student icon
     }
   ];
 
