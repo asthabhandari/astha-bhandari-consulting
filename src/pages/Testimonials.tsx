@@ -18,41 +18,49 @@ const Testimonials = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/04be238a-88f1-40d8-a728-95645ac8fc09.png" 
-                  alt="Testimonial 1" 
-                  className="w-full h-auto rounded-lg"
+                  src="/lovable-uploads/3e5a4679-1e9f-460a-a3ac-f6a0cee14d11.png" 
+                  alt="Testimonial - UPenn acceptance" 
+                  className="w-full h-auto"
                 />
               </div>
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/44261243-3412-4efb-a7f2-1f43b6c080e6.png" 
-                  alt="Testimonial 2" 
-                  className="w-full h-auto rounded-lg"
+                  src="/lovable-uploads/af7d0e9d-0884-48b6-91d2-bfcc066a4123.png" 
+                  alt="Testimonial - Thank you message" 
+                  className="w-full h-auto"
                 />
               </div>
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/a03198cc-7596-4022-9a5c-14ab4cd80ff4.png" 
-                  alt="Testimonial 3" 
-                  className="w-full h-auto rounded-lg"
+                  src="/lovable-uploads/64afd46b-0847-4a70-9e9a-6e81ddb06092.png" 
+                  alt="Testimonial - Northeastern acceptance" 
+                  className="w-full h-auto"
                 />
               </div>
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/b772e18f-6646-4fe3-bdac-58cc8eb7444b.png" 
-                  alt="Testimonial 4" 
-                  className="w-full h-auto rounded-lg"
+                  src="/lovable-uploads/c53df84b-8259-46c2-ab5a-7aa6cbfaf465.png" 
+                  alt="Testimonial - Recommendation" 
+                  className="w-full h-auto"
                 />
               </div>
               
               <div className="p-4">
                 <img 
-                  src="/lovable-uploads/fddf1116-e596-4281-935f-3af4baae6a96.png" 
-                  alt="Testimonial 5" 
-                  className="w-full h-auto rounded-lg"
+                  src="/lovable-uploads/23134334-9fca-4ac3-9f76-86b51e72f287.png" 
+                  alt="Testimonial - Princeton acceptance" 
+                  className="w-full h-auto"
+                />
+              </div>
+              
+              <div className="p-4">
+                <img 
+                  src="/lovable-uploads/21353630-7cae-4a66-86a3-94c3755e5d20.png" 
+                  alt="Testimonial - Multiple acceptances" 
+                  className="w-full h-auto"
                 />
               </div>
             </div>
