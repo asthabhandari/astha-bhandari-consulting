@@ -1,6 +1,5 @@
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -8,10 +7,6 @@ const Impact = () => {
   return (
     <section className="py-20 bg-white text-black">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-5xl font-normal">OUR IMPACT</h2>
-        </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="space-y-8">
             <div className="flex flex-col">
