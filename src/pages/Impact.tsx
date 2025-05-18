@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import Navigation from '../components/Navigation';
@@ -67,7 +68,7 @@ const Impact = () => (
     <Navigation />
 
     {/* Impact statistics section with fluid typography and no overflow */}
-<section className="pt-36 pb-16 bg-black text-black">
+<section className="pt-36 pb-16 bg-black text-white">
   <div className="container mx-auto px-4">
     <div className="flex items-center mb-16">
       {/* 1️⃣ Fixed-size left image */}
@@ -144,7 +145,7 @@ const Impact = () => (
                       Kimberly and her family first reached out while working with another consultancy.
                     </p>
                     <p className="text-[25px] mb-6 font-['Garet']">
-                      They chose ABC because they wanted something personal, someone who cares. We wrote her entire application with care and intention. Today, she’s headed to Stanford as a confident and excited incoming student.
+                      They chose ABC because they wanted something personal, someone who cares. We wrote her entire application with care and intention. Today, she's headed to Stanford as a confident and excited incoming student.
                     </p>
                   </div>
                 </div>
@@ -210,20 +211,20 @@ const Impact = () => (
                   </div>
                 </CarouselItem>
                 
-                {/* Student Story 5 - Nicole (using silhouette) */}
+                {/* Student Story 5 - Nicole (using uploaded Berkeley student image) */}
                 <CarouselItem className="md:basis-3/4 lg:basis-2/3">
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-6 w-full flex justify-center">
                       <img 
-                        src="/images/BerekleyStudent.png" 
-                        alt="Student Silhouettes" 
+                        src="/lovable-uploads/b9dc11df-4bef-407c-8930-5d843eb3dd3f.png" 
+                        alt="UC Berkeley Student" 
                         className="h-[500px] w-auto mx-auto"
                       />
                     </div>
                     <div className="text-white text-center max-w-2xl">
                       <p className="text-[25px] mb-4 font-['Garet']">Nicole came to us through a referral with one clear goal: UC Berkeley.</p>
                       <p className="text-[25px] mb-6 font-['Garet']">Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.</p>
-                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley. *not pictured* </p>
+                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley.</p>
                     </div>
                   </div>
                 </CarouselItem>
