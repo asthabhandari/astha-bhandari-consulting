@@ -141,10 +141,10 @@ const Impact = () => (
                     />
                   </div>                    <div className="text-white text-center max-w-2xl">
                     <p className="text-[25px] mb-4 font-['Garet']">
-                      Kimberly and her family first reached out while working with another consultancy—but felt something was missing.
+                      Kimberly and her family first reached out while working with another consultancy.
                     </p>
                     <p className="text-[25px] mb-6 font-['Garet']">
-                      They chose ABC because they wanted more than cookie-cutter advice. We reworked her entire application with care and intention. Today, she’s headed to Stanford as a confident and excited incoming student.
+                      They chose ABC because they wanted something personal, someone who cares. We wrote her entire application with care and intention. Today, she’s headed to Stanford as a confident and excited incoming student.
                     </p>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ const Impact = () => (
                         Neha had built a strong resume of extracurriculars but felt unsure how to express her voice in writing.
                       </p>
                       <p className="text-[25px] mb-6 font-['Garet']">
-                        We worked closely with her to shape essays that felt honest, layered, and compelling. The result? A story she was proud of—and an acceptance letter from Duke University.
+                        We worked closely with her to shape essays that felt honest, layered, and compelling. The result? A story she was proud of and an acceptance letter from Duke University. *not pictured* 
                       </p>
                       </div>
                   </div>
@@ -215,15 +215,15 @@ const Impact = () => (
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-6 w-full flex justify-center">
                       <img 
-                        src="public/images/BerekleyStudent.png" 
+                        src="/images/BerekleyStudent.png" 
                         alt="Student Silhouettes" 
                         className="h-[500px] w-auto mx-auto"
                       />
                     </div>
                     <div className="text-white text-center max-w-2xl">
-                      <p className="text-[25px] mb-4 font-['Garet']">Nicole (not pictured) came to us through a referral with one clear goal: UC Berkeley.</p>
+                      <p className="text-[25px] mb-4 font-['Garet']">Nicole came to us through a referral with one clear goal: UC Berkeley.</p>
                       <p className="text-[25px] mb-6 font-['Garet']">Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.</p>
-                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley.</p>
+                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley. *not pictured* </p>
                     </div>
                   </div>
                 </CarouselItem>
