@@ -53,10 +53,10 @@ const CollegeMarquee = ({ colleges }: { colleges: CollegeInfo[] }) => {
         {extendedColleges.map((college, index) => (
           <div 
             key={index}
-            className="flex flex-col items-center justify-center px-8 min-w-[180px]"
+            className="flex flex-col items-center justify-center px-8 min-w-[250px]"
           >
             {/* College Logo */}
-            <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center mb-3 overflow-hidden">
+            <div className="w-24 h-24 rounded-full bg-white p-1 flex items-center justify-center mb-4 overflow-hidden">
               {college.logo ? (
                 <img 
                   src={college.logo} 
@@ -74,7 +74,7 @@ const CollegeMarquee = ({ colleges }: { colleges: CollegeInfo[] }) => {
                 </div>
               )}
             </div>
-            <span className="text-center font-['Garet'] text-white">{college.name}</span>
+            <span className="text-center font-['Garet'] text-white text-xl">{college.name}</span>
           </div>
         ))}
       </div>
@@ -90,44 +90,46 @@ const Impact = () => {
       {/* Impact statistics section with black background */}
       <section className="pt-32 pb-16 bg-white text-black">
         <div className="container mx-auto px-4">
-          {/* Impact statistics in row at the top with bigger font */}
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24 mb-16">
+          {/* Impact statistics in a single row with images on the sides */}
+          <div className="flex flex-wrap justify-between items-center mb-16 overflow-x-auto">
             {/* Left side word cloud image */}
-            <div className="hidden md:block">
+            <div className="hidden md:block flex-shrink-0">
               <img 
                 src="/lovable-uploads/b1b392c0-c004-451b-b54b-61866b6d97b2.png" 
                 alt="Student names word cloud" 
-                className="h-[200px] w-auto"
+                className="h-[120px] w-auto"
               />
             </div>
             
-            {/* Reordered statistics as requested */}
-            <div className="text-[#f89cb0] text-center">
-              <div className="text-5xl md:text-7xl font-['Garet']">100%</div>
-              <div className="font-light text-xl">success</div>
-            </div>
-            
-            <div className="text-[#f89cb0] text-center">
-              <div className="text-5xl md:text-7xl font-['Garet']">26</div>
-              <div className="font-light text-xl">dream acceptances</div>
-            </div>
-            
-            <div className="text-[#f89cb0] text-center">
-              <div className="text-5xl md:text-7xl font-['Garet']">54</div>
-              <div className="font-light text-xl">scholarships</div>
-            </div>
-            
-            <div className="text-[#f89cb0] text-center">
-              <div className="text-5xl md:text-7xl font-['Garet']">40</div>
-              <div className="font-light text-xl">mentorships</div>
+            {/* Statistics all in one line */}
+            <div className="flex flex-nowrap justify-center items-center gap-6 md:gap-10 lg:gap-16 flex-grow">
+              <div className="text-[#f89cb0] text-center flex-shrink-0">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-['Garet']">100%</div>
+                <div className="font-light text-sm md:text-base">success</div>
+              </div>
+              
+              <div className="text-[#f89cb0] text-center flex-shrink-0">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-['Garet']">26</div>
+                <div className="font-light text-sm md:text-base">dream acceptances</div>
+              </div>
+              
+              <div className="text-[#f89cb0] text-center flex-shrink-0">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-['Garet']">54</div>
+                <div className="font-light text-sm md:text-base">scholarships</div>
+              </div>
+              
+              <div className="text-[#f89cb0] text-center flex-shrink-0">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-['Garet']">40</div>
+                <div className="font-light text-sm md:text-base">mentorships</div>
+              </div>
             </div>
             
             {/* Right side pin image */}
-            <div className="hidden md:block">
+            <div className="hidden md:block flex-shrink-0">
               <img 
                 src="/lovable-uploads/51e52982-8346-406b-8b87-acc33f9a42bb.png" 
                 alt="College names location pin" 
-                className="h-[200px] w-auto"
+                className="h-[120px] w-auto"
               />
             </div>
           </div>
