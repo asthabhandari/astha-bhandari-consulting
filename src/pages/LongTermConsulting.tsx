@@ -1,76 +1,150 @@
-
 import React from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
 const LongTermConsulting = () => {
   const sections = [
     {
-      title: "COMPREHENSIVE GUIDANCE",
+      title: "EARLY COMPREHENSIVE PLANNING",
       content: (
-        <div className="space-y-6">
-          <p>
-            Our long-term college consulting program begins as early as 8th grade, providing students with a strategic roadmap tailored to their unique strengths, interests, and aspirations. We believe in building a foundation for success over time, not just cramming for applications in senior year.
+        <div className="space-y-6 font-sans text-xl text-gray-100 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-left">
+            I work one-on-one with your child starting as early as 8th grade to build a 
+            <span className="font-medium text-white"> multi-year admissions strategy</span>—because 
+            elite applicants aren't made in a single year. Unlike generic advisors, I focus on 
+            cultivating an authentic, standout profile that evolves with your child's strengths.
           </p>
-          <p>
-            Through personalized guidance, we help students craft their academic journey, select challenging but appropriate courses, and develop extracurricular activities that showcase their passions and leadership abilities.
-          </p>
-          <p>
-            Our consultants have decades of experience navigating the ever-changing landscape of college admissions, ensuring that your child's application stands out in an increasingly competitive environment.
+          
+          <div className="border-l-2 border-[#f89cb0] pl-4 my-4 text-left">
+            <p className="italic text-gray-300">
+              "The most successful applicants begin their journey years before applications are due." 
+            </p>
+          </div>
+          
+          <p className="text-left">
+            Through <span className="font-medium text-white">exclusive, personalized guidance</span>, 
+            I'll help craft an academic trajectory and extracurricular portfolio that signals both 
+            intellectual vitality and leadership—exactly what Ivy+ committees look for.
           </p>
         </div>
       ),
     },
     {
-      title: "ACADEMIC EXCELLENCE",
+      title: "ACADEMIC PROFILE OPTIMIZATION",
       content: (
-        <div className="space-y-6">
-          <p>
-            We meticulously plan each student's academic trajectory, recommending specific courses that align with their college goals while also maximizing their GPA and class rank. This includes strategic AP, IB, or honors course selection based on the student's strengths and target colleges.
+        <div className="space-y-6 font-sans text-xl text-gray-100 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-left">
+            I strategically plan every course selection—not just for GPA maximization, but to create a 
+            <span className="font-medium text-white"> cohesive intellectual narrative</span> that aligns 
+            with your child's target schools' expectations.
           </p>
-          <p>
-            Our team monitors academic performance throughout high school, addressing any concerns before they become obstacles to college acceptance. We provide resources for academic support when needed and recommend enrichment opportunities that go beyond the classroom.
-          </p>
-          <p>
-            Regular check-ins ensure that students stay on track with their academic goals, adjusting strategies as needed to maintain excellence while avoiding burnout.
-          </p>
+          
+          <ul className="list-disc pl-6 space-y-3 marker:text-[#f89cb0] text-left">
+            <li>
+              <span className="font-medium text-white">Early intervention system</span> monitors 
+              academic performance
+            </li>
+            <li>
+              Access to <span className="font-medium text-white">elite tutors</span> and 
+              enrichment programs
+            </li>
+          </ul>
         </div>
       ),
     },
     {
-      title: "EXTRACURRICULAR DEVELOPMENT",
+      title: "EXTRA-CURRICULAR ARCHITECTURE",
       content: (
-        <div className="space-y-6">
-          <p>
-            The most successful applicants demonstrate depth, not just breadth, in their activities. We help students identify and cultivate their authentic interests, guiding them to meaningful opportunities that showcase their initiative and impact.
+        <div className="space-y-6 font-sans text-xl text-gray-100 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-left">
+            Top schools want <span className="font-medium text-white">spikes, not checkboxes</span>. 
+            I help students cultivate 2-3 <span className="font-medium text-white">high-impact passions</span>:
           </p>
-          <p>
-            From summer programs and internships to research opportunities and community service, we connect students with experiences that both enrich their high school years and strengthen their applications.
-          </p>
-          <p>
-            We emphasize leadership development, helping students create or expand passion projects that demonstrate their ability to effect change and take initiative—qualities highly valued by admissions committees.
-          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6 mt-4 text-left">
+            <div className="bg-white/10 p-4 rounded-lg">
+              <h4 className="font-medium text-white mb-2 text-center">Exclusive Opportunities</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>• University research partnerships</li>
+                <li>• Founder-level initiatives</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 p-4 rounded-lg">
+              <h4 className="font-medium text-white mb-2 text-center">Narrative Development</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Impact measurement strategies</li>
+                <li>• Compelling storytelling frameworks</li>
+              </ul>
+            </div>
+          </div>
         </div>
       ),
     },
     {
-      title: "COLLEGE SELECTION STRATEGY",
+      title: "COLLEGE MATCHING STRATEGY",
       content: (
-        <div className="space-y-6">
-          <p>
-            Finding the right college fit goes beyond rankings and reputation. Our consultants conduct thorough assessments of each student's preferences, learning style, career aspirations, and personality to develop a customized list of target schools.
+        <div className="space-y-6 font-sans text-xl text-gray-100 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-left">
+            My <span className="font-medium text-white">proprietary matching system</span> identifies 
+            schools where your child will:
           </p>
-          <p>
-            We employ sophisticated matching algorithms combined with decades of institutional knowledge to identify colleges where students will not only gain admission but also thrive academically, socially, and personally.
-          </p>
-          <p>
-            Our guidance includes strategically categorizing schools into reach, target, and likely options, ensuring that students apply to a balanced list that maximizes their opportunities for acceptance and financial aid.
-          </p>
+          
+          <ol className="list-decimal pl-6 space-y-3 marker:font-medium marker:text-[#f89cb0] text-left">
+            <li>Gain admission based on institutional priorities</li>
+            <li>Thrive socially and academically</li>
+          </ol>
+          
+          <div className="mt-6 p-4 bg-white/5 border border-[#f89cb0]/20 rounded-lg text-left">
+            <p>
+              Includes strategic ED/RD planning and 
+              <span className="font-medium text-white"> yield protection</span> techniques.
+            </p>
+          </div>
         </div>
       ),
     },
+    {
+      title: "24/7 DIRECT ACCESS",
+      content: (
+        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
+          <div className="bg-[#f89cb0]/10 p-6 rounded-lg border border-[#f89cb0]/30">
+            <p className="text-left text-gray-100">
+              <span className="font-medium text-white">Premium clients receive my personal phone number</span> for 
+              urgent questions or guidance between our scheduled meetings.
+            </p>
+            
+            <ul className="list-disc pl-6 space-y-3 mt-4 marker:text-[#f89cb0] text-gray-100">
+              <li className="pl-2">Text me anytime about application updates or decisions</li>
+              <li className="pl-2">Immediate support before important interviews</li>
+              <li className="pl-2">Last-minute essay reviews during crunch time</li>
+            </ul>
+            
+            <p className="mt-6 text-left italic text-gray-300">
+              "When our internent connection went down at 10pm the night of the Duke ED deadline, Astha
+              answered my text within 15 minutes and submitted the application for us."
+              <span className="block mt-2 not-italic text-white">— The Subedi Family</span>
+            </p>
+          </div>
+        </div>
+      ),
+    }
   ];
 
-  return <ServiceDetail title="LONG TERM COLLEGE CONSULTING" sections={sections} />;
+  return (
+    <ServiceDetail 
+      title={
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-pink tracking-tight mb-6 text-center">
+          LONG TERM COLLEGE CONSULTING
+        </h1>
+      }
+      subtitle={
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4 text-center">
+          Multi-year strategic planning for elite university admissions
+        </p>
+      }
+      sections={sections} 
+    />
+  );
 };
 
 export default LongTermConsulting;

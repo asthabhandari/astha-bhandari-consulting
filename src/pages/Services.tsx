@@ -1,34 +1,35 @@
-
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      title: "LONG TERM COLLEGE CONSULTING",
-      description: "Not sure how to make high school count?",
-      color: "#f89cb0", // Pink color
-      image: "/lovable-uploads/ca70cf13-69da-4478-bd4b-acdff09d9db7.png", // Mentoring icon
-      link: "/consulting"
+      title: "EARLY COLLEGE ROADMAPPING",
+      description: "For families who understand: Top-tier admissions requires multi-year strategy, with the right consultant.",
+      color: "#f89cb0",
+      image: "/images/LongTerm.png", // Removed 'public' from path
+      link: "/consulting",
+      badge: "MOST EXCLUSIVE"
     },
     {
-      title: "COLLEGE ESSAYS",
-      description: "What if your child's story could change everything?",
-      color: "#f89cb0", // Using the pink color consistently as requested
-      image: "/lovable-uploads/26f11a20-76bf-427c-a667-19e313568527.png", // Book/essay icon
-      link: "/essays"
+      title: "COLLEGE ESSAY CONSULTING",
+      description: "Transform your child's story into an admissions advantage with our incredible writers who can create a story out of anything.",
+      color: "#f89cb0",
+      image: "/images/Essays.png", // Removed 'public' from path
+      link: "/essays",
+      badge: "LIMITED SPOTS"
     },
     {
-      title: "MENTORSHIP OPPORTUNITIES",
-      description: "Not thinking of college yet?",
-      color: "#f89cb0", // Using the pink color consistently as requested
-      image: "/lovable-uploads/8009a80e-0b42-4a68-a05e-d609a1fde3fd.png", // Accepted student icon
-      link: "/mentorship"
+      title: "PRE-COLLEGE MENTORSHIP",
+      description: "Cultivate intellectual curiosity and leadership long before applications begin, because this is about life, not just college.",
+      color: "#f89cb0",
+      image: "/images/Mentorship.png", // Removed 'public' from path
+      link: "/mentorship",
+      badge: "EARLY ACCESS"
     }
   ];
 
@@ -38,9 +39,16 @@ const Services = () => {
       
       <section className="pt-32 pb-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl md:text-6xl font-normal mb-16 tracking-wide">HOW WE CAN HELP</h2>
+          <div className="mb-16">
+            <h2 className="text-5xl md:text-6xl font-serif font-bold mb-4 tracking-tight">
+              STRATEGIC ADMISSIONS SUPPORT
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl">
+              Discreet, personalized guidance for families pursuing exceptional outcomes
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -49,18 +57,24 @@ const Services = () => {
                 color={service.color}
                 image={service.image}
                 link={service.link}
+                badge={service.badge}
               />
             ))}
           </div>
         </div>
       </section>
       
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-normal mb-8">Ready to take the next step?</h2>
-          <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-base font-normal tracking-wider">
+          <h2 className="text-3xl md:text-4xl services-font mb-4">
+            The difference between <span className="text-[#f89cb0]">good</span> and <span className="text-[#f89cb0]">unforgettable</span>
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our students have a 100% acceptance rate at top-20 institutions. And a 100% acceptance rate at their dream school.
+          </p>
+          <Button asChild className="bg-[#f89cb0] hover:bg-[#f89cb0]/90 text-black rounded-none px-8 py-6 h-auto text-base font-normal tracking-wider transition-transform hover:scale-105">
             <a href="https://calendly.com/asthabhandari/quick-chat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              BOOK A CALL <ArrowRight size={20} />
+              SECURE YOUR CONSULTATION <ArrowRight size={20} />
             </a>
           </Button>
         </div>

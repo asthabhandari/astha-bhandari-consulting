@@ -1,10 +1,17 @@
-
+/* 1. Font import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+.services-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 2. Tailwind directives (each on its own line!) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 3. Base layer: CSS variables, resets, and font application */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -91,9 +98,18 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Global resets and font application */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Garet',sans-serif] font-light;
+  }
 }
 
-/* Add Garet font */
+/* 4. Font-face declarations (unchanged) */
 @font-face {
   font-family: 'Garet';
   font-style: normal;
@@ -108,28 +124,18 @@
   src: url('https://fonts.cdnfonts.com/s/68565/Garet-Heavy.woff') format('woff');
 }
 
-@layer base {
-  * {
-    @apply border-border;
+/* 5. Marquee keyframes & utility moved into the utilities layer */
+@layer utilities {
+  @keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
   }
-
-  body {
-    @apply bg-background text-foreground font-['Garet',sans-serif] font-light;
-  }
-}
-
-/* Marquee animation for college logos - twice the speed */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
+  .animate-marquee {
+    animation: marquee 15s linear infinite;
   }
 }
 
-.animate-marquee {
-  animation: marquee 15s linear infinite;
-  min-width: 100%;
-  display: flex;
+html, body {
+  font-family: 'Garet', sans-serif;
 }
+

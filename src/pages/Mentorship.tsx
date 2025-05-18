@@ -1,76 +1,102 @@
-
 import React from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
 const Mentorship = () => {
   const sections = [
     {
-      title: "PERSONALIZED GUIDANCE",
+      title: "ONE-ON-ONE LEARNING ADVENTURES",
       content: (
-        <div className="space-y-6">
-          <p>
-            Our mentorship program pairs students with current undergraduates or recent graduates from top universities who share similar academic interests, career aspirations, and personal backgrounds. These connections provide invaluable insights and guidance that goes beyond what admissions websites or campus tours can offer.
+        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
+          <p className="text-left text-gray-100">
+            Whether your child is <span className="font-medium text-white">struggling with multiplication tables</span> or 
+            <span className="font-medium text-white"> launching a nonprofit</span>, my personalized mentorship adapts to their 
+            exact needs—no canned programs, just authentic learning.
           </p>
-          <p>
-            Through regular one-on-one sessions, students receive personalized advice from someone who has recently navigated the complex college admissions process and succeeded at their dream school. This near-peer relationship creates a comfortable space for honest questions and authentic conversations.
-          </p>
-          <p>
-            Mentors serve as role models, coaches, and champions for their mentees, offering encouragement during challenging times and celebrating victories along the way to college acceptance.
-          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6 mt-6 text-left">
+            <div className="bg-white/10 p-5 rounded-lg border border-[#f89cb0]/20">
+              <h4 className="font-medium text-white mb-3 text-center text-lg">Academic Support</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Elementary reading/writing foundations</li>
+                <li>• Middle school STEM project coaching</li>
+                <li>• High school AP/IB subject mastery</li>
+                <li>• And more! Just ask :)</li>
+              </ul>
+            </div>
+            <div className="bg-white/10 p-5 rounded-lg border border-[#f89cb0]/20">
+              <h4 className="font-medium text-white mb-3 text-center text-lg">Passion Projects</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Science fair prep & competition strategy</li>
+                <li>• Creative writing portfolio development</li>
+                <li>• Social impact initiative planning</li>
+                <li>• And more! Just ask :)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       ),
     },
     {
-      title: "INSIDER KNOWLEDGE",
+      title: "HOW IT WORKS",
       content: (
-        <div className="space-y-6">
-          <p>
-            What's it really like to study engineering at MIT? How competitive is the pre-med track at Johns Hopkins? What unwritten social rules govern campus life at Princeton? Our mentors provide the unfiltered truth about academic rigor, campus culture, and student life at elite institutions.
-          </p>
-          <p>
-            Beyond general campus information, mentors offer specific insights about professors, classes, research opportunities, and extracurricular organizations that aren't available in any guidebook or on university websites.
-          </p>
-          <p>
-            This insider knowledge helps students make more informed decisions about where to apply and ultimately attend, increasing the likelihood of finding a genuine college fit where they'll thrive academically and personally.
-          </p>
+        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
+          <ol className="list-decimal pl-6 space-y-4 marker:font-medium marker:text-[#f89cb0] text-left text-gray-100">
+            <li className="pl-3">
+              <span className="font-medium text-white">Discovery Call</span> – We identify your child’s goals (30 min)
+            </li>
+            <li className="pl-3">
+              <span className="font-medium text-white">Custom Plan</span> – I design a learning journey matching their age + interests
+            </li>
+            <li className="pl-3">
+              <span className="font-medium text-white">Flexible Sessions</span> – Meet weekly or as-needed (via Zoom/in-person)
+            </li>
+          </ol>
+          
+          <div className="border-l-2 border-[#f89cb0] pl-4 mt-6 text-left">
+            <p className="italic text-gray-300">
+              "Astha made geometry click for my 8th grader and helped my 5th grader publish his comic book all in the same month!"
+              <span className="block mt-2 not-italic text-white">— The Cecil Family</span>
+            </p>
+          </div>
         </div>
       ),
     },
     {
-      title: "MAJOR & CAREER EXPLORATION",
+      title: "24/7 MENTOR ACCESS",
       content: (
-        <div className="space-y-6">
-          <p>
-            Many high school students feel pressure to commit to a major or career path before they've had meaningful exposure to their options. Our mentors help students explore academic disciplines and professional pathways based on firsthand experience.
-          </p>
-          <p>
-            Through guided conversations, recommended resources, and sometimes virtual shadowing opportunities, mentors help students develop a deeper understanding of various fields and how their interests and strengths might translate to fulfilling college majors and eventual careers.
-          </p>
-          <p>
-            This exploration process not only helps with college applications but also equips students with the self-knowledge to make more confident decisions throughout their academic journey.
-          </p>
+        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
+          <div className="bg-[#f89cb0]/10 p-6 rounded-lg border border-[#f89cb0]/30">
+            <p className="text-left text-gray-100">
+              <span className="font-medium text-white">My personal number</span> goes to families for:
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mt-4 marker:text-[#f89cb0] text-gray-100">
+              <li className="pl-2">Last-minute science project crises</li>
+              <li className="pl-2">Essay drafts needing urgent feedback</li>
+              <li className="pl-2">"How do I...?" questions about passions</li>
+            </ul>
+            <p className="mt-4 text-left text-sm text-gray-400">
+            </p>
+          </div>
         </div>
       ),
-    },
-    {
-      title: "PREPARATION FOR COLLEGE SUCCESS",
-      content: (
-        <div className="space-y-6">
-          <p>
-            The transition from high school to college involves much more than academic adjustments. Our mentors prepare students for the independence, time management challenges, and social dynamics they'll encounter on campus.
-          </p>
-          <p>
-            From practical advice about course selection, study strategies, and professor relationships to guidance on navigating roommate situations, campus organizations, and work-life balance, our mentors help students develop the soft skills essential for college success.
-          </p>
-          <p>
-            By addressing potential challenges before they arise, we help ensure that students not only get into their dream schools but arrive prepared to make the most of their college experience from day one.
-          </p>
-        </div>
-      ),
-    },
+    }
   ];
 
-  return <ServiceDetail title="MENTORSHIP OPPORTUNITIES" sections={sections} />;
+  return (
+    <ServiceDetail 
+      title={
+        <h1 className="text-5xl md:text-6xl font-serif font-bold text-white tracking-tight mb-6 text-center">
+          PERSONALIZED MENTORSHIP
+        </h1>
+      }
+      subtitle={
+        <p className="text-2xl text-gray-300 max-w-3xl mx-auto mt-4 text-center">
+          For curious minds aged 6–18: mastering schoolwork <span className="text-[#f89cb0]">+</span> fueling passions
+        </p>
+      }
+      sections={sections} 
+    />
+  );
 };
 
 export default Mentorship;
