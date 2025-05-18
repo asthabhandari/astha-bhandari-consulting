@@ -224,7 +224,7 @@ const Impact = () => (
                     <div className="text-white text-center max-w-2xl">
                       <p className="text-[25px] mb-4 font-['Garet']">Nicole came to us through a referral with one clear goal: UC Berkeley.</p>
                       <p className="text-[25px] mb-6 font-['Garet']">Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.</p>
-                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley.</p>
+                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley. *not pictured*</p>
                     </div>
                   </div>
                 </CarouselItem>
