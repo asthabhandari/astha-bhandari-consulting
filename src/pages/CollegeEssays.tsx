@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
@@ -65,7 +64,7 @@ const CollegeEssays: React.FC = () => {
     }
   ];
 
-const PACKAGES = [
+  const PACKAGES = [
     {
       name: "Lite Package",
       price: "$2,500",
@@ -109,7 +108,7 @@ const PACKAGES = [
       ],
       highlight: true
     }
-];
+  ];
 
   const sections = [
     {
@@ -118,31 +117,30 @@ const PACKAGES = [
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {PACKAGES.map((pkg) => (
             <div 
-        key={pkg.name}
-        className={`p-8 rounded-2xl border-2 transition-all ${
-          pkg.highlight 
-            ? "bg-gradient-to-br from-[#f89cb0]/10 to-[#f89cb0]/5 border-[#f89cb0]/40 shadow-lg"
-            : "bg-gradient-to-b from-white/5 to-transparent border-white/20 hover:border-[#f89cb0]/40"
-        }`}
-      >
-        <h3 className="text-2xl font-bold text-white mb-3 font-sans">{pkg.name}</h3>
-        <p className={`text-2xl font-semibold mb-4 ${pkg.highlight ? "text-[#f89cb0]" : "text-[#f89cb0]"} font-sans`}>
-          {pkg.price}
-          {pkg.note && <span className="block text-gray-400 text-sm mt-1 font-sans">{pkg.note}</span>}
-        </p>
-        {/* Add the best for line here */}
-        <p className="text-sm text-gray-400 italic mb-4 font-sans">Best for: {pkg.bestFor}</p>
-        <ul className="space-y-3 text-gray-300 font-sans">
-          {pkg.features.map((feature, i) => (
-            <li key={i} className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>{feature}</span>
-            </li>
+              key={pkg.name}
+              className={`p-8 rounded-2xl border-2 transition-all ${
+                pkg.highlight 
+                  ? "bg-gradient-to-br from-[#f89cb0]/10 to-[#f89cb0]/5 border-[#f89cb0]/40 shadow-lg"
+                  : "bg-gradient-to-b from-white/5 to-transparent border-white/20 hover:border-[#f89cb0]/40"
+              }`}
+            >
+              <h3 className="text-2xl font-bold text-white mb-3 font-sans">{pkg.name}</h3>
+              <p className={`text-2xl font-semibold mb-4 ${pkg.highlight ? "text-[#f89cb0]" : "text-[#f89cb0]"} font-sans`}>
+                {pkg.price}
+                {pkg.note && <span className="block text-gray-400 text-sm mt-1 font-sans">{pkg.note}</span>}
+              </p>
+              <p className="text-sm text-gray-400 italic mb-4 font-sans">Best for: {pkg.bestFor}</p>
+              <ul className="space-y-3 text-gray-300 font-sans">
+                {pkg.features.map((feature, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
-      </div>
-      ))}
-      </div>
+        </div>
       )
     },
     ...APPLICATION_PHASES.map(phase => ({

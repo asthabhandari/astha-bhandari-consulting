@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
@@ -30,7 +31,10 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ title, subtitle, sections
       <section className="pt-32 pb-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 gap-8">
-            <h1 className="text-5xl md:text-7xl font-normal tracking-wide">{title}</h1>
+            <div className="w-full">
+              {title}
+              {subtitle && <p className="text-xl text-gray-400 mt-4">{subtitle}</p>}
+            </div>
           </div>
           
           {/* Sections with centered titles */}
