@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import LongTermConsulting from "./pages/LongTermConsulting";
 import CollegeEssays from "./pages/CollegeEssays";
-import Mentorship from "./pages/Mentorship";
+import Mentorship from "./pages/ALaCarte";
 import Impact from "./pages/Impact";
 import NotFound from "./pages/NotFound";
 

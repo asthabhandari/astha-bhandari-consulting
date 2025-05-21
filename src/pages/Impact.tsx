@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious 
 } from '@/components/ui/carousel';
-import { ScrollArea } from '@/components/ui/scroll-area';
+
 
 // College Grid Component
 type CollegeInfo = {
@@ -43,30 +43,86 @@ const collegesList: CollegeInfo[] = [
 ];
 
 const CollegeBlock = ({ college }: { college: CollegeInfo }) => (
-  <div className="flex flex-col items-center justify-center w-[280px] px-8">
-    <div className="w-48 h-48 rounded-full bg-white p-1 flex items-center justify-center mb-4 overflow-hidden">
+  <div className="flex flex-col items-center justify-center w-[120px] md:w-[280px] px-4 md:px-8">
+    <div className="w-20 h-20 md:w-48 md:h-48 rounded-full bg-white p-1 flex items-center justify-center mb-2 md:mb-4 overflow-hidden">
       {college.logo ? (
         <img
           src={college.logo}
           alt={`${college.name} logo`}
           className="w-full h-full object-contain"
+          loading="lazy"
         />
       ) : (
-        <div className="w-full h-full flex items-center justify-center text-2xl font-bold bg-[#f89cb0] text-white">
+        <div className="w-full h-full flex items-center justify-center text-lg md:text-2xl font-bold bg-[#f89cb0] text-white">
           {college.name.charAt(0)}
         </div>
       )}
     </div>
-    <span className="text-center font-['Garet'] text-white text-2xl">
+    <span className="text-center font-['Garet'] text-white text-sm md:text-2xl">
       {college.name}
     </span>
   </div>
 );
 
-const Impact = () => (
-  <div className="min-h-screen bg-black">
-    <Navigation />
+const Impact = () => {
+  // Student stories data
+  const studentStories = [
+    {
+      id: "kimberly",
+      image: "/lovable-uploads/2f7e0f7a-be5d-4ba2-b53d-9f9d44d4a63e.png",
+      alt: "Stanford Student",
+      paragraphs: [
+        "Kimberly and her family first reached out while working with another consultancy.",
+        "They chose ABC because they were looking for a more personalized approach - someone who would truly listen, support, and guide.",
+        "With careful mentorship, Kimberly was able to craft and refine an authentic story.",
+        <span className="font-semibold italic text-[#ff4d6d]">Stanford University</span>,
+      ]
+    },
+    {
+      id: "ayush",
+      image: "/lovable-uploads/ce68d2e8-17b6-4b92-8f81-bb131c07e312.png",
+      alt: "Northeastern University Student",
+      paragraphs: [
+        "Ayush came to us in 9th grade, unsure how to navigate the pressures of high school and college prep.",
+        "Through our Long-Term Consulting package, we helped him launch a club, develop an investment project, and grow a social media platform. His growth and persistence led to his dream school.",
+        <span className="font-semibold italic text-[#ff4d6d]">Northeastern University</span>,
+      ]
+    },
+    {
+      id: "neha",
+      image: "/images/DukeStudent.png",
+      alt: "Duke University Student",
+      paragraphs: [
+        "Neha had built a strong resume of extracurriculars but felt unsure how to express her voice in writing.",
+        "We worked closely with her to shape essays that felt honest, layered, and compelling. The result? A story she was proud of and an acceptance letter from Duke University. *not pictured*",
+        <span className="font-semibold italic text-[#ff4d6d]">Duke University</span>,
+      ]
+    },
+    {
+      id: "leon",
+      image: "/lovable-uploads/04c7e99d-25ee-4239-bfd0-79fda79b66ce.png",
+      alt: "UPenn Student",
+      paragraphs: [
+        "Leon discovered ABC while searching for a college consultancy that truly prioritized students over profits.",
+        "From day one, we partnered closely with him, refining his essays line by line, and prepping him thoroughly for interviews. His dedication paid off, and today, he's proud to call UPenn home.",
+        <span className="font-semibold italic text-[#ff4d6d]">University of Pennsylvania</span>,
+      ]
+    },
+    {
+      id: "nicole",
+      image: "/images/BerekleyStudent.png",
+      alt: "UC Berkeley Student",
+      paragraphs: [
+        "Nicole came to us through a referral with one clear goal: UC Berkeley.",
+        "Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.",
+        "Now she's exactly where she dreamed of being. *not pictured*",
+        <span className="font-semibold italic text-[#ff4d6d]">University of Berkeley</span>,
+        
+      ]
+    }
+  ];
 
+<<<<<<< HEAD
     {/* Impact statistics section with fluid typography and no overflow */}
 <section className="pt-36 pb-16 bg-black text-white">
   <div className="container mx-auto px-4">
@@ -79,50 +135,119 @@ const Impact = () => (
           className="h-[160px] w-auto"
         />
       </div>
+=======
+  
+  return (
+    <div className="min-h-screen bg-black">
+      <Navigation />
+>>>>>>> 7541578 (feat: fixing a bunch of stuff lol)
 
-      {/* 2️⃣ Stats wrapper: takes all remaining space, spreads items evenly */}
-      <div className="flex flex-1 justify-between items-center px-4">
-        {[
-          { value: "100%", label: "success" },
-          { value: "26",   label: "dream acceptances" },
-          { value: "54",   label: "scholarships" },
-          { value: "40",   label: "mentorships" },
-        ].map(({ value, label }) => (
-          <div key={label} className="text-[#f89cb0] text-center flex-shrink">
-            {/* fluid number: clamped between 3rem and 7rem, grows with viewport */}
-            <div className="font-['Garet'] text-[clamp(3rem,8vw,7rem)]">
-              {value}
+      {/* Impact statistics - added mb-8 to create space between value and label */}
+      <section className="pt-24 md:pt-36 pb-12 md:pb-16 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center mb-12 md:mb-16">
+            <div className="hidden md:flex flex-shrink-0">
+              <img
+                src="/lovable-uploads/b1b392c0-c004-451b-b54b-61866b6d97b2.png"
+                alt="Student names word cloud"
+                className="h-[160px] w-auto"
+                loading="lazy"
+              />
             </div>
-            {/* fluid label: clamped between 1rem and 2rem */}
-            <div className="font-light text-[clamp(1rem,2.5vw,2rem)]">
-              {label}
+
+            <div className="flex flex-col md:flex-row flex-1 justify-between items-center space-y-6 md:space-y-0 md:space-x-5 px-0 md:px-4">
+              {[
+                { value: "100%", label: "success" },
+                { value: "26", label: "dream acceptances" },
+                { value: "54", label: "scholarships" },
+                { value: "40", label: "mentorships" },
+              ].map(({ value, label }) => (
+                <div key={label} className="text-[#f89cb0] text-center">
+                  <div className="font-['Garet'] text-4xl md:text-[clamp(3rem,8vw,7rem)] mb-2 md:mb-4"> {/* Added mb-2 md:mb-4 */}
+                    {value}
+                  </div>
+                  <div className="font-light text-lg md:text-[clamp(1rem,2.5vw,2rem)]">
+                    {label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden md:flex flex-shrink-0">
+              <img
+                src="/lovable-uploads/51e52982-8346-406b-8b87-acc33f9a42bb.png"
+                alt="College names location pin"
+                className="h-[160px] w-auto"
+                loading="lazy"
+              />
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      {/* 3️⃣ Fixed-size right image */}
-      <div className="flex-shrink-0">
-        <img
-          src="/lovable-uploads/51e52982-8346-406b-8b87-acc33f9a42bb.png"
-          alt="College names location pin"
-          className="h-[160px] w-auto"
-        />
+      {/* College Marquee - unchanged */}
+      <section className="py-4 md:py-8 bg-black space-y-4 md:space-y-16">
+        <Marquee speed={40} gradient={false} pauseOnHover loop={0}>
+          {collegesList.slice(0, 8).map(c => <CollegeBlock key={c.name} college={c} />)}
+        </Marquee>
+        <Marquee speed={40} gradient={false} pauseOnHover loop={0} direction="right">
+          {collegesList.slice(8, 16).map(c => <CollegeBlock key={`rev-${c.name}`} college={c} />)}
+        </Marquee>
+      </section>
+
+      {/* Real People section - added mx-auto to center content */}
+       <section className="py-8 md:py-12 bg-black text-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl md:text-5xl font-['Garet'] tracking-wider mb-6 md:mb-8 text-center">
+      REAL PEOPLE. REAL RESULTS.
+    </h2>
+    <Carousel opts={{ align: "start", loop: true }} className="w-full">
+      <CarouselContent className="py-4 md:py-8">
+        {studentStories.map((story) => (
+          <CarouselItem key={story.id} className="basis-full">
+            <div className="flex flex-col items-center mx-auto max-w-4xl px-4"> {/* Centered container with max-width */}
+              <div className="mb-4 md:mb-6 w-full flex justify-center">
+                <img 
+                  src={story.image} 
+                  alt={story.alt} 
+                  className="h-[300px] md:h-[500px] w-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-white text-center w-full">
+                {story.paragraphs.map((text, i) => (
+                  <p key={i} className="text-lg md:text-[25px] mb-3 md:mb-4 font-['Garet']">
+                    {text}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <div className="flex justify-center gap-6 mt-4">
+        <CarouselPrevious className="relative bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 h-10 w-10 md:h-14 md:w-14" />
+        <CarouselNext className="relative bg-[#f89cb0] text-black hover:bg-[#f89cb0]/90 h-10 w-10 md:h-14 md:w-14" />
       </div>
-    </div>
+    </Carousel>
   </div>
 </section>
+      {/* Testimonial Collage - unchanged */}
+      <section className="bg-white text-black">
+        <img
+          src="/images/testimonials-banner.png"
+          alt="Testimonials Collage"
+          className="w-full h-auto"
+          loading="lazy"
+        />
+      </section>
 
-    {/* College Marquee Section */}
-    <section className="py8 bg-black space-y-16">
-      <Marquee speed={60} gradient={false} pauseOnHover loop={0}>
-        {collegesList.map(c => (<CollegeBlock key={c.name} college={c} />))}
-      </Marquee>
-      <Marquee speed={60} gradient={false} pauseOnHover loop={0} direction="right">
-        {collegesList.map(c => (<CollegeBlock key={`rev-${c.name}`} college={c} />))}
-      </Marquee>
-    </section>
+      <Footer />
+    </div>
+  );
+};
 
+<<<<<<< HEAD
     {/* Real People. Real Results. section */}
     <section className="py-12 bg-black text-white">
       <div className="container mx-auto px-4">
@@ -272,3 +397,6 @@ const Impact = () => (
 );
 
 export default Impact;
+=======
+export default Impact;
+>>>>>>> 7541578 (feat: fixing a bunch of stuff lol)

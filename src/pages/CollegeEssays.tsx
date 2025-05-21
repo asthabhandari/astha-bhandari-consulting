@@ -1,127 +1,201 @@
-import React from "react";
+import React, { useState } from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
-const CollegeEssays = () => {
-  const sections = [
+const CollegeBundles: React.FC = () => {
+  const [expandedServices, setExpandedServices] = useState<Record<string, boolean>>({});
+
+  const toggleService = (serviceName: string) => {
+    setExpandedServices(prev => ({
+      ...prev,
+      [serviceName]: !prev[serviceName]
+    }));
+  };
+
+  // Service descriptions remain identical
+  const SERVICE_DESCRIPTIONS = {
+    "Self-Discovery & Academic Framing": "Define the student's unique strengths, passions, and long-term academic goals to create a foundation for all application materials.",
+    "Personal Branding & Story": "Develop a cohesive narrative thread that ties essays, activities, and recommendations together into a compelling personal brand.",
+    "Activities & Honors Strategy": "Optimize and edit extracurricular and awards entries to highlight leadership, depth, and impact within character limits.",
+    "School List Curation": "Research and assemble a balanced list of reach, match, and safety schools aligned with the student's interests and goals.",
+    "Application Calendar": "Create a detailed timeline mapping out essay drafts, test dates, recommendation deadlines, and submission windows.",
+    "Common App Essay": "Guide brainstorming, structure, and revision of the primary personal statement to reflect authentic voice and narrative.",
+    "Supplemental Essays": "Assist in crafting school-specific essays that clearly articulate fit, interest, and individual story for each application.",
+    "Recommendation Strategy": "Advise on selecting recommenders and preparing custom brag sheets to ensure strong, narrative-aligned endorsements.",
+    "Mock Interviews": "Conduct practice interviews to build confidence, refine delivery, and prepare for alumni or scholarship interview formats.",
+    "Submission Support": "Provide final review of all application components and technical guidance on submission platforms to avoid errors.",
+    "Offer Analysis & Decision": "Compare acceptance offers side-by-side and coach students and families to make informed, confident enrollment decisions.",
+    "Financial Aid Review": "Interpret financial aid and scholarship awards, and guide appeals or negotiations to maximize affordability.",
+    "Undergrad Match-Ups": "Connect admitted students with current undergraduates for honest insights into campus life and culture.",
+    "Waitlist Strategy": "Advise on crafting effective Letters of Continued Interest and follow-up plans for waitlisted applications.",
+    "Transition Prep": "Offer guidance on housing, orientation, and early networking to ensure a smooth transition to college life."
+  };
+
+  // Phases structure remains identical
+  const APPLICATION_PHASES = [
     {
-      title: "IVY-LEVEL PERSONAL STATEMENT CRAFTING",
-      content: (
-        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
-          <p className="text-left text-gray-100">
-            The personal statement is where <span className="font-medium text-white">elite applicants separate themselves</span> from the crowd. My 
-            <span className="font-medium text-white"> signature storytelling framework</span> helps uncover those 
-            <span className="font-medium text-white"> pivotal moments</span> admissions committees remember—whether it's founding a nonprofit at 15 or unique cultural perspectives.
-          </p>
-          
-          <div className="border-l-2 border-[#f89cb0] pl-4 my-4 text-left">
-          </div>
-          
-          <ul className="list-disc pl-6 space-y-3 marker:text-[#f89cb0] text-left text-gray-100">
-            <li className="pl-2"><span className="font-medium text-white">5+ drafting sessions</span> to refine voice and structure</li>
-            <li className="pl-2"><span className="font-medium text-white">Ivy+ reader insights</span> on what makes essays memorable</li>
-            <li className="pl-2"><span className="font-medium text-white">Tone calibration</span> for authenticity and sophistication</li>
-          </ul>
-        </div>
-      ),
+      title: "Pre-Application",
+      services: [
+        { name: "Self-Discovery & Academic Framing", lite: false, core: false, premium: true },
+        { name: "Personal Branding & Story", lite: false, core: false, premium: true },
+        { name: "Activities & Honors Strategy", lite: true, core: true, premium: true },
+        { name: "School List Curation", lite: false, core: true, premium: true },
+        { name: "Application Calendar", lite: false, core: true, premium: true }
+      ]
     },
     {
-      title: "STRATEGIC SUPPLEMENTAL ESSAY DEVELOPMENT",
-      content: (
-        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
-          <p className="text-left text-gray-100">
-            Top schools use supplements as <span className="font-medium text-white">secret "fit tests"</span>. My decade of decoding reveals:
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mt-4 text-left">
-            <div className="bg-white/10 p-4 rounded-lg">
-              <h4 className="font-medium text-white mb-2 text-center">Institutional Nuances</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• How Yale's "Why Yale?" differs from Princeton's</li>
-                <li>• Which STEM programs want humanities perspectives</li>
-                <li>• When legacy mentions help vs. hurt</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 p-4 rounded-lg">
-              <h4 className="font-medium text-white mb-2 text-center">Recent Success</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• 27 supplements → Harvard+Stanford acceptances</li>
-                <li>• 92% reuse rate across applications</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      ),
+      title: "Application Execution",
+      services: [
+        { name: "Common App Essay", lite: true, core: true, premium: true },
+        { name: "Supplemental Essays", lite: true, core: true, premium: true },
+        { name: "Recommendation Strategy", lite: false, core: true, premium: true },
+        { name: "Mock Interviews", lite: false, core: false, premium: true },
+        { name: "Submission Support", lite: false, core: true, premium: true }
+      ]
     },
     {
-      title: "ADMISSIONS COMMITTEE-LEVEL EDITING",
-      content: (
-        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
-          <p className="text-left text-gray-100">
-            While others fix grammar, I optimize <span className="font-medium text-white">admissibility</span> through:
-          </p>
-          
-          <ul className="list-disc pl-6 space-y-3 marker:text-[#f89cb0] text-left text-gray-100">
-            <li className="pl-2">
-              <span className="font-medium text-white">Psychological framing</span> - When vulnerability strengthens vs. undermines
-            </li>
-            <li className="pl-2">
-              <span className="font-medium text-white">Lexical precision</span> - The ideal "big word" frequency per school
-            </li>
-            <li className="pl-2">
-              <span className="font-medium text-white">Narrative threading</span> - Connecting all application materials
-            </li>
-          </ul>
-          
-          <div className="mt-6 p-4 bg-white/5 border border-[#f89cb0]/20 rounded-lg text-left">
-            <p className="text-gray-300">
-              <span className="font-medium text-white">Complete discretion</span> - No junior staff, no shared servers, just direct 1:1 collaboration.
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "24/7 ESSAY EMERGENCY SUPPORT",
-      content: (
-        <div className="space-y-6 font-sans text-xl leading-relaxed max-w-2xl mx-auto">
-          <div className="bg-[#f89cb0]/10 p-6 rounded-lg border border-[#f89cb0]/30">
-            <p className="text-left text-gray-100">
-              <span className="font-medium text-white">Direct phone access</span> for urgent essay crises—because deadlines wait for no one.
-            </p>
-            
-            <ul className="list-disc pl-6 space-y-3 mt-4 marker:text-[#f89cb0] text-gray-100">
-              <li className="pl-2">11th-hour Common App crash? I'll review drafts until midnight</li>
-              <li className="pl-2">Surprise supplemental prompt? Get same-day rewrites</li>
-              <li className="pl-2">Interview tomorrow? Bullet-point strategy in 30 minutes</li>
-            </ul>
-            
-            <p className="mt-6 text-left italic text-gray-300">
-              "When our internent connection went down at 10pm the night of the Duke ED deadline, Astha
-              answered my text within 15 minutes and submitted the application for us."
-              <span className="block mt-2 not-italic text-white">— The Subedi Family</span>
-            </p>
-          </div>
-        </div>
-      ),
+      title: "Post-Acceptance",
+      services: [
+        { name: "Offer Analysis & Decision", lite: false, core: false, premium: true },
+        { name: "Financial Aid Review", lite: false, core: false, premium: true },
+        { name: "Undergrad Match-Ups", lite: false, core: false, premium: true },
+        { name: "Waitlist Strategy", lite: false, core: false, premium: true },
+        { name: "Transition Prep", lite: false, core: false, premium: true }
+      ]
     }
   ];
 
-  return (
-    <ServiceDetail 
-      title={
-        <h1 className="text-5xl md:text-6xl font-serif font-bold text-white tracking-tight mb-6 text-center">
-          IVY-GRADE ESSAY MASTERY
-        </h1>
-      }
-      subtitle={
-        <p className="text-2xl text-gray-300 max-w-3xl mx-auto mt-4 text-center">
-          Where compelling narratives meet admissions strategy
+const PACKAGES = [
+    {
+      name: "Lite Package",
+      price: "$2,500",
+      bestFor: "Self-motivated students applying ED to a dream school",
+      features: [
+        "2 strategy meetings",
+        "Common App essay (2 rounds)",
+        "3 supplemental essays (2 rounds each)",
+        "Activities list editing"
+      ],
+      highlight: false
+    },
+    {
+      name: "Core Package",
+      price: "$6,950",
+      note: "($6,200 w/ friend)",
+      bestFor: "Students needing a comprehensive plan for multiple applications",
+      features: [
+        "6 strategy meetings",
+        "Common App essay (6 rounds)",
+        "7+ supplemental essays (6 rounds each)",
+        "Activities + awards editing",
+        "Brag sheet & recommenders"
+      ],
+      highlight: false
+    },
+    {
+      name: "Premium Package",
+      price: "$11,500",
+      bestFor: "Families wanting 24/7 expert access and end-to-end support",
+      features: [
+        "10+ strategy meetings + direct access",
+        "Unlimited essay revisions",
+        "Live co-writing sessions",
+        "Complete activities & awards editing",
+        "Personal branding framework",
+        "School list strategy",
+        "Mock interviews",
+        "Scholarship & merit aid strategy",
+        "Post-acceptance advising"
+      ],
+      highlight: true
+    }
+];
+
+  const sections = [
+    {
+      title: "TIERED PACKAGES",
+      content: (
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {PACKAGES.map((pkg) => (
+            <div 
+        key={pkg.name}
+        className={`p-8 rounded-2xl border-2 transition-all ${
+          pkg.highlight 
+            ? "bg-gradient-to-br from-[#f89cb0]/10 to-[#f89cb0]/5 border-[#f89cb0]/40 shadow-lg"
+            : "bg-gradient-to-b from-white/5 to-transparent border-white/20 hover:border-[#f89cb0]/40"
+        }`}
+      >
+        <h3 className="text-2xl font-bold text-white mb-3 font-sans">{pkg.name}</h3>
+        <p className={`text-2xl font-semibold mb-4 ${pkg.highlight ? "text-[#f89cb0]" : "text-[#f89cb0]"} font-sans`}>
+          {pkg.price}
+          {pkg.note && <span className="block text-gray-400 text-sm mt-1 font-sans">{pkg.note}</span>}
         </p>
-      }
-      sections={sections} 
+        {/* Add the best for line here */}
+        <p className="text-sm text-gray-400 italic mb-4 font-sans">Best for: {pkg.bestFor}</p>
+        <ul className="space-y-3 text-gray-300 font-sans">
+          {pkg.features.map((feature, i) => (
+            <li key={i} className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      ))}
+      </div>
+      )
+    },
+    ...APPLICATION_PHASES.map(phase => ({
+      title: phase.title.toUpperCase(),
+      content: (
+        <div className="max-w-6xl mx-auto">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse rounded-xl overflow-hidden">
+              <thead>
+                <tr className="bg-gradient-to-r from-[#f89cb0]/20 to-[#f89cb0]/10">
+                  <th className="px-6 py-4 font-bold text-white font-sans text-lg">Service</th>
+                  <th className="px-6 py-4 font-bold text-white font-sans text-lg text-center">Lite</th>
+                  <th className="px-6 py-4 font-bold text-white font-sans text-lg text-center">Core</th>
+                  <th className="px-6 py-4 font-bold text-white font-sans text-lg text-center">Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                {phase.services.map(service => (
+                  <React.Fragment key={service.name}>
+                    <tr 
+                      className="border-b border-white/10 hover:bg-white/5 cursor-pointer transition-colors"
+                      onClick={() => toggleService(service.name)}
+                    >
+                      <td className="px-6 py-5 font-medium text-[#f89cb0] font-sans">{service.name}</td>
+                      <td className="px-6 py-5 text-center font-sans">{service.lite ? '✓' : ''}</td>
+                      <td className="px-6 py-5 text-center font-sans">{service.core ? '✓' : ''}</td>
+                      <td className="px-6 py-5 text-center font-sans">{service.premium ? '✓' : ''}</td>
+                    </tr>
+                    {expandedServices[service.name] && (
+                      <tr className="bg-white/5">
+                        <td colSpan={4} className="px-6 py-4">
+                          <p className="text-gray-300 text-sm animate-fadeIn font-sans">
+                            {SERVICE_DESCRIPTIONS[service.name]}
+                          </p>
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )
+    }))
+  ];
+
+  return (
+    <ServiceDetail
+      title={<h1 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight mb-6 text-center">Our College Admissions Services</h1>}
+      subtitle="High-touch support at every phase — from ideation to enrollment."
+      sections={sections}
     />
   );
 };
 
-export default CollegeEssays;
+export default CollegeBundles;

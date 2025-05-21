@@ -11,7 +11,7 @@ const Services = () => {
       title: "EARLY COLLEGE ROADMAPPING",
       description: "For families who understand: Top-tier admissions requires multi-year strategy, with the right consultant.",
       color: "#f89cb0",
-      image: "/images/LongTerm.png", // Removed 'public' from path
+      image: "/images/LongTerm.png", 
       link: "/consulting",
       badge: "MOST EXCLUSIVE"
     },
@@ -19,17 +19,17 @@ const Services = () => {
       title: "COLLEGE ESSAY CONSULTING",
       description: "Transform your child's story into an admissions advantage with our incredible writers who can create a story out of anything.",
       color: "#f89cb0",
-      image: "/images/Essays.png", // Removed 'public' from path
+      image: "/images/Essays.png", 
       link: "/essays",
       badge: "LIMITED SPOTS"
     },
     {
-      title: "PRE-COLLEGE MENTORSHIP",
-      description: "Cultivate intellectual curiosity and leadership long before applications begin, because this is about life, not just college.",
+      title: "A LA CARTE RUSHED EDITING",
+      description: "For families who need a last-minute review of their essays, or a second opinion on their application.",
       color: "#f89cb0",
-      image: "/images/Mentorship.png", // Removed 'public' from path
+      image: "/images/Mentorship.png", 
       link: "/mentorship",
-      badge: "EARLY ACCESS"
+      badge: "LAST MINUTE"
     }
   ];
 
