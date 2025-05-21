@@ -1,7 +1,8 @@
+
 import React, { useState } from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
-const CollegeBundles: React.FC = () => {
+const CollegeEssays: React.FC = () => {
   const [expandedServices, setExpandedServices] = useState<Record<string, boolean>>({});
 
   const toggleService = (serviceName: string) => {
@@ -112,7 +113,7 @@ const PACKAGES = [
 
   const sections = [
     {
-      title: "TIERED PACKAGES",
+      title: "COLLEGE ESSAY PACKAGES - UPDATED",
       content: (
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {PACKAGES.map((pkg) => (
@@ -191,11 +192,11 @@ const PACKAGES = [
 
   return (
     <ServiceDetail
-      title={<h1 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight mb-6 text-center">Our College Admissions Services</h1>}
-      subtitle="High-touch support at every phase — from ideation to enrollment."
+      title={<h1 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight mb-6 text-center">Our College Essay Services</h1>}
+      subtitle="Expert guidance for crafting authentic, impactful essays that stand out."
       sections={sections}
     />
   );
 };
 
-export default CollegeBundles;
+export default CollegeEssays;
