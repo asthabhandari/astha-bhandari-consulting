@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import Navigation from '../components/Navigation';
@@ -115,32 +114,17 @@ const Impact = () => {
       paragraphs: [
         "Nicole came to us through a referral with one clear goal: UC Berkeley.",
         "Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.",
-        "Now she's exactly where she dreamed of being. *not pictured*",
+        "Now she's exactly where she dreamed of being: UC Berkeley. *not pictured*",
         <span className="font-semibold italic text-[#ff4d6d]">University of Berkeley</span>,
         
       ]
     }
   ];
 
-<<<<<<< HEAD
-    {/* Impact statistics section with fluid typography and no overflow */}
-<section className="pt-36 pb-16 bg-black text-white">
-  <div className="container mx-auto px-4">
-    <div className="flex items-center mb-16">
-      {/* 1️⃣ Fixed-size left image */}
-      <div className="flex-shrink-0">
-        <img
-          src="/lovable-uploads/b1b392c0-c004-451b-b54b-61866b6d97b2.png"
-          alt="Student names word cloud"
-          className="h-[160px] w-auto"
-        />
-      </div>
-=======
   
   return (
     <div className="min-h-screen bg-black">
       <Navigation />
->>>>>>> 7541578 (feat: fixing a bunch of stuff lol)
 
       {/* Impact statistics - added mb-8 to create space between value and label */}
       <section className="pt-24 md:pt-36 pb-12 md:pb-16 bg-black">
@@ -155,7 +139,7 @@ const Impact = () => {
               />
             </div>
 
-            <div className="flex flex-col md:flex-row flex-1 justify-between items-center space-y-6 md:space-y-0 md:space-x-5 px-0 md:px-4">
+            <div className="flex flex-col md:flex-row flex-1 justify-between items-center space-y-6 md:space-y-0 md:space-x-4 px-0 md:px-4">
               {[
                 { value: "100%", label: "success" },
                 { value: "26", label: "dream acceptances" },
@@ -247,156 +231,4 @@ const Impact = () => {
   );
 };
 
-<<<<<<< HEAD
-    {/* Real People. Real Results. section */}
-    <section className="py-12 bg-black text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-['Garet'] tracking-wider mb-8">
-          REAL PEOPLE. REAL RESULTS.</h2>
-        <ScrollArea className="w-full">
-          <Carousel opts={{ align: "center", loop: true, containScroll: false }} className="w-full relative">
-            <CarouselContent className="py-8">
-              {/* Student Story 1 - Kimberly */}
-              <CarouselItem className="md:basis-3/4 lg:basis-2/3">
-                 <div className="flex flex-col items-center text-center">
-                  <div className="mb-6 w-full flex justify-center">
-                    <img 
-                      src="/lovable-uploads/2f7e0f7a-be5d-4ba2-b53d-9f9d44d4a63e.png" 
-                      alt="Stanford Student" 
-                      className="h-[500px] w-auto mx-auto"
-                    />
-                  </div>                    <div className="text-white text-center max-w-2xl">
-                    <p className="text-[25px] mb-4 font-['Garet']">
-                      Kimberly and her family first reached out while working with another consultancy.
-                    </p>
-                    <p className="text-[25px] mb-6 font-['Garet']">
-                      They chose ABC because they wanted something personal, someone who cares. We wrote her entire application with care and intention. Today, she's headed to Stanford as a confident and excited incoming student.
-                    </p>
-                  </div>
-                </div>
-              </CarouselItem>
-
-              {/* Student Story 2 - Ayush */}
-              <CarouselItem className="md:basis-3/4 lg:basis-2/3">
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-6 w-full flex justify-center">
-                    <img
-                      src="/lovable-uploads/ce68d2e8-17b6-4b92-8f81-bb131c07e312.png"
-                      alt="Northeastern University Student"
-                      className="h-[500px] w-auto mx-auto"
-                    />
-                  </div>
-                  <div className="text-white text-center max-w-2xl">
-                    <p className="text-[25px] mb-4 font-['Garet']">
-                      Ayush came to us in 9th grade, unsure how to navigate the pressures of high school and college prep.
-                    </p>
-                    <p className="text-[25px] mb-6 font-['Garet']">
-                      Through our Long-Term Consulting package, we helped him launch a club, develop an investment project, and grow a social media platform. His growth and persistence led to his dream school: Northeastern.
-                    </p>
-
-                  </div>
-                </div>
-              </CarouselItem>
-                
-                {/* Student Story 3 - Neha */}
-                <CarouselItem className="md:basis-3/4 lg:basis-2/3">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="mb-6 w-full flex justify-center">
-                      <img 
-                        src="/images/DukeStudent.png" 
-                        alt="Student" 
-                        className="h-[500px] w-auto mx-auto"
-                      />
-                    </div>
-                    <div className="text-white text-center max-w-2xl">
-                      <p className="text-[25px] mb-4 font-['Garet']">
-                        Neha had built a strong resume of extracurriculars but felt unsure how to express her voice in writing.
-                      </p>
-                      <p className="text-[25px] mb-6 font-['Garet']">
-                        We worked closely with her to shape essays that felt honest, layered, and compelling. The result? A story she was proud of and an acceptance letter from Duke University. *not pictured* 
-                      </p>
-                      </div>
-                  </div>
-                </CarouselItem>
-                
-                {/* Student Story 4 - Leon */}
-                <CarouselItem className="md:basis-3/4 lg:basis-2/3">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="mb-6 w-full flex justify-center">
-                      <img 
-                        src="/lovable-uploads/04c7e99d-25ee-4239-bfd0-79fda79b66ce.png" 
-                        alt="Student" 
-                        className="h-[500px] w-auto mx-auto"
-                      />
-                    </div>
-                    <div className="text-white text-center max-w-2xl">
-                      <p className="text-[25px] mb-4 font-['Garet']">Leon discovered ABC while searching for a college consultancy that truly prioritized students over profits.</p>
-                      <p className="text-[25px] mb-6 font-['Garet']">From day one, we partnered closely with him, refining his essays line by line, and prepping him thoroughly for interviews. His dedication paid off, and today, he's proud to call UPenn home.</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-                
-                {/* Student Story 5 - Nicole (using uploaded Berkeley student image) */}
-                <CarouselItem className="md:basis-3/4 lg:basis-2/3">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="mb-6 w-full flex justify-center">
-                      <img 
-                        src="/lovable-uploads/b9dc11df-4bef-407c-8930-5d843eb3dd3f.png" 
-                        alt="UC Berkeley Student" 
-                        className="h-[500px] w-auto mx-auto"
-                      />
-                    </div>
-                    <div className="text-white text-center max-w-2xl">
-                      <p className="text-[25px] mb-4 font-['Garet']">Nicole came to us through a referral with one clear goal: UC Berkeley.</p>
-                      <p className="text-[25px] mb-6 font-['Garet']">Through mentorship, we helped her build a website to showcase her art. Then, through essay coaching, we helped her turn that passion into a story that was both captivating and true.</p>
-                      <p className="text-[25px] font-['Garet']">Now she's exactly where she dreamed of being: UC Berkeley. *not pictured*</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-            </CarouselContent>
-            <div className="flex justify-center gap-6 mt-4 relative">
-              <CarouselPrevious
-                className="
-                  relative 
-                  left-[-20px]     /* push 20px left */
-                  bg-[#f89cb0] 
-                  text-black 
-                  hover:bg-[#f89cb0]/90 
-                  h-14 w-14
-                  flex items-center justify-center
-                "
-              />
-              <CarouselNext
-                className="
-                  relative 
-                  right-[-20px]    /* push 20px right */
-                  bg-[#f89cb0] 
-                  text-black 
-                  hover:bg-[#f89cb0]/90 
-                  h-14 w-14
-                  flex items-center justify-center
-                "
-              />
-            </div>
-          </Carousel>
-        </ScrollArea>
-      </div>
-    </section>
-
-    {/* Testimonial Collage */}
-    <section className="bg-white text-black m-0 p-0">
-      <img
-        src="/images/testimonials-banner.png"
-        alt="Testimonials Collage"
-        className="w-full h-auto"
-      />
-    </section>
-
-    <Footer />
-  </div>
-);
-
 export default Impact;
-=======
-export default Impact;
->>>>>>> 7541578 (feat: fixing a bunch of stuff lol)
