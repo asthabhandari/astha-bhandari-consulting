@@ -20,7 +20,7 @@ const Services = () => {
       description: "Transform your child's story into an admissions advantage with our incredible writers who can create a story out of anything.",
       color: "#f89cb0",
       image: "/images/Essays.png", 
-      link: "/essays",
+      link: "/bundles",
       badge: "LIMITED SPOTS"
     },
     {
