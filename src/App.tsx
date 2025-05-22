@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import LongTermConsulting from "./pages/LongTermConsulting";
-import CollegeEssays from "./pages/CollegeEssays";
+import CollegeBundles from "./pages/CollegeBundles";
 import ALaCarte from "./pages/ALaCarte";
 import Impact from "./pages/Impact";
 import NotFound from "./pages/NotFound";
@@ -26,7 +26,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/consulting" element={<LongTermConsulting />} />
-          <Route path="/essays" element={<CollegeEssays />} />
+          <Route path="/bundles" element={<CollegeBundles />} />
           <Route path="/mentorship" element={<ALaCarte />} />
           <Route path="/impact" element={<Impact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

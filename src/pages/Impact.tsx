@@ -138,7 +138,6 @@ const Impact = () => {
                 loading="lazy"
               />
             </div>
-
             <div className="flex flex-col md:flex-row flex-1 justify-between items-center space-y-6 md:space-y-0 md:space-x-4 px-0 md:px-4">
               {[
                 { value: "100%", label: "success" },

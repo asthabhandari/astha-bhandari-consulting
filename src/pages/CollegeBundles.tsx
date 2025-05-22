@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ServiceDetail from "../components/ServiceDetail";
 
-const CollegeEssays: React.FC = () => {
+const CollegeBundles: React.FC = () => {
   const [expandedServices, setExpandedServices] = useState<Record<string, boolean>>({});
 
   const toggleService = (serviceName: string) => {
@@ -64,7 +64,7 @@ const CollegeEssays: React.FC = () => {
     }
   ];
 
-  const PACKAGES = [
+const PACKAGES = [
     {
       name: "Lite Package",
       price: "$2,500",
@@ -197,4 +197,4 @@ const CollegeEssays: React.FC = () => {
   );
 };
 
-export default CollegeEssays;
+export default CollegeBundles;
