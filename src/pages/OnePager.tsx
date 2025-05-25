@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, GraduationCap } from "lucide-react";
 
 const OnePager = () => {
   const services = [
@@ -119,58 +119,69 @@ const OnePager = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black p-8 max-w-[8.5in] mx-auto print:p-4">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-pink-25 to-pink-100 text-black p-8 max-w-[8.5in] mx-auto print:p-4 relative"
+         style={{
+           backgroundImage: `
+             radial-gradient(circle at 20% 30%, rgba(248, 156, 176, 0.1) 0%, transparent 50%),
+             radial-gradient(circle at 80% 70%, rgba(248, 156, 176, 0.08) 0%, transparent 50%),
+             radial-gradient(circle at 40% 80%, rgba(248, 156, 176, 0.06) 0%, transparent 50%),
+             radial-gradient(circle at 90% 20%, rgba(248, 156, 176, 0.04) 0%, transparent 50%)
+           `
+         }}>
       {/* Header Section */}
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-2">
-          <span className="text-[#f89cb0]">AB</span>C
-        </h1>
-        <p className="text-xl font-medium text-gray-700 mb-4">
+      <div className="text-center mb-10">
+        <div className="flex items-center justify-center gap-2 mb-3">
+          <h1 className="text-6xl font-bold">
+            <span className="text-black">AB</span><span className="text-[#f89cb0]">C</span>
+          </h1>
+          <GraduationCap size={48} className="text-[#f89cb0]" />
+        </div>
+        <p className="text-2xl font-medium text-gray-700 mb-6">
           Great Essays Don't Write Themselves. ABC Does.
         </p>
-        <div className="flex justify-center items-center gap-8 text-sm font-medium">
-          <span className="bg-[#f89cb0] text-white px-3 py-1 rounded">100% Acceptance Rate</span>
+        <div className="flex justify-center items-center gap-8 text-base font-medium">
+          <span className="bg-[#f89cb0] text-white px-4 py-2 rounded">100% Acceptance Rate</span>
           <span className="text-gray-600">7+ Years Experience</span>
           <span className="text-gray-600">Stanford, Ivy League, Duke & T20 Schools</span>
         </div>
       </div>
 
       {/* Stats Row */}
-      <div className="grid grid-cols-4 gap-4 mb-8 text-center">
+      <div className="grid grid-cols-4 gap-4 mb-10 text-center">
         <div>
-          <div className="text-3xl font-bold text-[#f89cb0]">100%</div>
-          <div className="text-sm text-gray-600">Acceptance Rate</div>
+          <div className="text-4xl font-bold text-[#f89cb0]">100%</div>
+          <div className="text-base text-gray-600">Acceptance Rate</div>
         </div>
         <div>
-          <div className="text-3xl font-bold text-[#f89cb0]">26</div>
-          <div className="text-sm text-gray-600">Dream Acceptances</div>
+          <div className="text-4xl font-bold text-[#f89cb0]">26</div>
+          <div className="text-base text-gray-600">Dream Acceptances</div>
         </div>
         <div>
-          <div className="text-3xl font-bold text-[#f89cb0]">54</div>
-          <div className="text-sm text-gray-600">Scholarships</div>
+          <div className="text-4xl font-bold text-[#f89cb0]">54</div>
+          <div className="text-base text-gray-600">Scholarships</div>
         </div>
         <div>
-          <div className="text-3xl font-bold text-[#f89cb0]">40</div>
-          <div className="text-sm text-gray-600">Mentorships</div>
+          <div className="text-4xl font-bold text-[#f89cb0]">40</div>
+          <div className="text-base text-gray-600">Mentorships</div>
         </div>
       </div>
 
       {/* Who We Are Section */}
-      <div className="grid grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-3 gap-6 mb-10">
         <div className="col-span-2">
-          <h2 className="text-2xl font-bold mb-3 text-[#f89cb0]">WHO WE ARE</h2>
-          <p className="text-sm leading-relaxed mb-3">
+          <h2 className="text-3xl font-bold mb-4 text-[#f89cb0]">WHO WE ARE</h2>
+          <p className="text-base leading-relaxed mb-4">
             <strong> Astha Bhandari Consulting </strong>  was founded by Astha Bhandari— the proud daughter of immigrants who 
             <strong> cracked the code of elite college admissions</strong> with no legacy status, 
             no private consultants, and no family blueprint to follow.
           </p>
-          <p className="text-sm leading-relaxed mb-3">
+          <p className="text-base leading-relaxed mb-4">
             Astha discovered that college admissions isn't just about checking boxes. Every school is looking 
             for something different: students who <strong>FIT</strong>. Each institution seeks distinct values, 
             voices, and potential.
           </p>
-          <div className="bg-[#f89cb0]/10 p-3 rounded border-l-4 border-[#f89cb0]">
-            <p className="text-sm italic">
+          <div className="bg-[#f89cb0]/10 p-4 rounded border-l-4 border-[#f89cb0]">
+            <p className="text-base italic">
               "My favorite part of this is watching students realize how amazing their story can be if written correctly."
             </p>
           </div>
@@ -179,22 +190,22 @@ const OnePager = () => {
           <img 
             src="/lovable-uploads/e0be2613-5b22-4b88-a2a2-c54da891d7d1.png" 
             alt="Astha at Stanford" 
-            className="w-32 h-40 object-cover rounded shadow-lg"
+            className="w-36 h-44 object-cover rounded shadow-lg"
           />
         </div>
       </div>
 
       {/* Services Section */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-[#f89cb0] text-center">OUR SERVICES</h2>
-        <div className="grid grid-cols-3 gap-4">
+      <div className="mb-10">
+        <h2 className="text-3xl font-bold mb-6 text-[#f89cb0] text-center">OUR SERVICES</h2>
+        <div className="grid grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div key={index} className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-bold text-lg mb-2">{service.name}</h3>
-              <p className="text-xs text-gray-600 mb-3 italic">{service.description}</p>
-              <ul className="space-y-1">
+            <div key={index} className="border border-gray-200 rounded-lg p-5 bg-white/50">
+              <h3 className="font-bold text-xl mb-3">{service.name}</h3>
+              <p className="text-sm text-gray-600 mb-4 italic">{service.description}</p>
+              <ul className="space-y-2">
                 {service.features.map((feature, i) => (
-                  <li key={i} className="text-xs flex items-start">
+                  <li key={i} className="text-sm flex items-start">
                     <span className="text-[#f89cb0] mr-2">•</span>
                     <span>{feature}</span>
                   </li>
@@ -209,77 +220,85 @@ const OnePager = () => {
       <div className="print:break-before-page"></div>
 
       {/* Success Stories */}
-      <div className="mb-8">
-        <h3 className="text-2xl font-bold mb-6 text-[#f89cb0] text-center">REAL PEOPLE, REAL RESULTS</h3>
-        <div className="grid grid-cols-3 gap-6 mb-8">
+      <div className="mb-10">
+        <h3 className="text-3xl font-bold mb-8 text-[#f89cb0] text-center">REAL PEOPLE, REAL RESULTS</h3>
+        <div className="grid grid-cols-3 gap-6 mb-10">
           {studentStories.map((student, index) => (
             <div key={index} className="text-center">
               <img 
                 src={student.image} 
                 alt={`${student.name} at ${student.college}`} 
-                className="w-24 h-24 rounded-full object-cover mx-auto mb-3"
+                className="w-28 h-28 rounded-full object-cover mx-auto mb-4"
               />
-              <h4 className="font-bold text-lg">{student.name}</h4>
-              <p className="text-sm text-[#f89cb0] font-medium mb-2">{student.college}</p>
-              <p className="text-xs text-gray-600 italic">"{student.review}"</p>
+              <h4 className="font-bold text-xl">{student.name}</h4>
+              <p className="text-base text-[#f89cb0] font-medium mb-3">{student.college}</p>
+              <p className="text-sm text-gray-600 italic">"{student.review}"</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* College Logos */}
-      <div className="mb-8">
-        <h3 className="text-xl font-bold mb-4 text-[#f89cb0] text-center">COLLEGE ACCEPTANCES</h3>
-        <div className="grid grid-cols-6 gap-3">
+      <div className="mb-10">
+        <h3 className="text-2xl font-bold mb-6 text-[#f89cb0] text-center">COLLEGE ACCEPTANCES</h3>
+        <div className="grid grid-cols-6 gap-4">
           {colleges.map((college, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-white p-1 rounded-full shadow-sm flex items-center justify-center">
+              <div className="w-20 h-20 bg-white p-2 rounded-full shadow-sm flex items-center justify-center">
                 <img 
                   src={college.logo} 
                   alt={`${college.name} logo`} 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xs text-center mt-1 font-medium">{college.name}</span>
+              <span className="text-sm text-center mt-2 font-medium">{college.name}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Featured Testimonial */}
-      <div className="bg-[#f89cb0]/10 p-6 rounded-lg mb-8 text-center">
-        <p className="text-base italic mb-3 font-medium">
+      <div className="bg-[#f89cb0]/10 p-8 rounded-lg mb-10 text-center">
+        <p className="text-lg italic mb-4 font-medium">
           "When our internet connection went down at 10pm the night of the Duke ED deadline, 
           Astha answered my text within 15 minutes and submitted the application for us."
         </p>
-        <p className="text-sm font-bold">— The Subedi Family</p>
-        <p className="text-xs text-gray-600">Duke University Early Decision Acceptance</p>
+        <p className="text-base font-bold">— The Subedi Family</p>
+        <p className="text-sm text-gray-600">Duke University Early Decision Acceptance</p>
       </div>
 
       {/* Additional Student Reviews */}
-      <div className="grid grid-cols-2 gap-4 mb-8">
-        <div className="bg-gray-50 p-4 rounded">
-          <p className="text-sm italic mb-2">"ABC helped me discover my authentic voice and turn my passion into a compelling story."</p>
-          <p className="text-xs font-medium">— Student, UC Berkeley</p>
+      <div className="grid grid-cols-2 gap-6 mb-10">
+        <div className="bg-gray-50/70 p-5 rounded">
+          <p className="text-base italic mb-3">"ABC helped me discover my authentic voice and turn my passion into a compelling story."</p>
+          <p className="text-sm font-medium">— Student, UC Berkeley</p>
         </div>
-        <div className="bg-gray-50 p-4 rounded">
-          <p className="text-sm italic mb-2">"The personalized approach made all the difference. I felt supported every step of the way."</p>
-          <p className="text-xs font-medium">— Student, Northwestern</p>
+        <div className="bg-gray-50/70 p-5 rounded">
+          <p className="text-base italic mb-3">"The personalized approach made all the difference. I felt supported every step of the way."</p>
+          <p className="text-sm font-medium">— Student, Northwestern</p>
         </div>
       </div>
 
       {/* Contact Section */}
-      <div className="text-center border-t pt-6">
-        <h3 className="text-xl font-bold mb-3 text-[#f89cb0]">READY TO GET STARTED?</h3>
-        <p className="text-sm mb-4">
+      <div className="text-center border-t pt-8">
+        <h3 className="text-2xl font-bold mb-4 text-[#f89cb0]">READY TO GET STARTED?</h3>
+        <p className="text-base mb-6">
           Trusted by families in Silicon Valley, North Carolina, and abroad
         </p>
-        <div className="flex justify-center items-center gap-8">
-          <div className="text-sm">
-            <p className="font-medium">Book a Free Consultation</p>
-            <p className="text-gray-600">calendly.com/asthabhandari/quick-chat</p>
+        <div className="flex justify-center items-center gap-12">
+          <div className="text-base flex flex-col items-center">
+            <p className="font-medium mb-2">Book a Free Consultation</p>
+            <p className="text-gray-600 mb-4">calendly.com/asthabhandari/quick-chat</p>
+            {/* QR Code */}
+            <div className="w-24 h-24 bg-white p-2 rounded border border-gray-200">
+              <img 
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://calendly.com/asthabhandari/quick-chat"
+                alt="QR Code for Calendly booking"
+                className="w-full h-full"
+              />
+            </div>
           </div>
-          <div className="text-sm">
+          <div className="text-base">
             <p className="font-medium">Location</p>
             <p className="text-gray-600">San Francisco Bay Area, CA</p>
           </div>
