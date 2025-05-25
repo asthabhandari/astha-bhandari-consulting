@@ -11,6 +11,7 @@ import LongTermConsulting from "./pages/LongTermConsulting";
 import CollegeBundles from "./pages/CollegeBundles";
 import ALaCarte from "./pages/ALaCarte";
 import Impact from "./pages/Impact";
+import OnePager from "./pages/OnePager";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/bundles" element={<CollegeBundles />} />
           <Route path="/mentorship" element={<ALaCarte />} />
           <Route path="/impact" element={<Impact />} />
+          <Route path="/one-pager" element={<OnePager />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
