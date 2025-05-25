@@ -129,7 +129,7 @@ const OnePager = () => {
           Great Essays Don't Write Themselves. ABC Does.
         </p>
         <div className="flex justify-center items-center gap-8 text-sm font-medium">
-          <span className="bg-[#f89cb0] text-white px-3 py-1 rounded">100% Success Rate</span>
+          <span className="bg-[#f89cb0] text-white px-3 py-1 rounded">100% Acceptance Rate</span>
           <span className="text-gray-600">7+ Years Experience</span>
           <span className="text-gray-600">Stanford, Ivy League, Duke & T20 Schools</span>
         </div>
@@ -139,7 +139,7 @@ const OnePager = () => {
       <div className="grid grid-cols-4 gap-4 mb-8 text-center">
         <div>
           <div className="text-3xl font-bold text-[#f89cb0]">100%</div>
-          <div className="text-sm text-gray-600">Success Rate</div>
+          <div className="text-sm text-gray-600">Acceptance Rate</div>
         </div>
         <div>
           <div className="text-3xl font-bold text-[#f89cb0]">26</div>
