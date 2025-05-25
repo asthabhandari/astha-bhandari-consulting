@@ -123,7 +123,7 @@ const OnePager = () => {
       {/* Header Section */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-2">
-          A<span className="text-[#f89cb0]">B</span>C
+          <span className="text-[#f89cb0]">AB</span>C
         </h1>
         <p className="text-xl font-medium text-gray-700 mb-4">
           Great Essays Don't Write Themselves. ABC Does.
@@ -160,7 +160,7 @@ const OnePager = () => {
         <div className="col-span-2">
           <h2 className="text-2xl font-bold mb-3 text-[#f89cb0]">WHO WE ARE</h2>
           <p className="text-sm leading-relaxed mb-3">
-            <strong>, ABC, Astha Bhandari Consulting, was founded by Astha Bhandari</strong> — the proud daughter of immigrants who 
+            <strong> Astha Bhandari Consulting </strong>  was founded by Astha Bhandari— the proud daughter of immigrants who 
             <strong> cracked the code of elite college admissions</strong> with no legacy status, 
             no private consultants, and no family blueprint to follow.
           </p>
