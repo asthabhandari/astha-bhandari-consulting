@@ -37,14 +37,85 @@ const OnePager = () => {
         "Personal branding framework",
         "School list strategy",
         "Mock interviews",
+        "Admissions guidance",
+        "Waitlist support",
+        "Financial aid review",
+        "Letter of continued interest",
         "Post-acceptance advising"
       ]
     }
   ];
 
+  const studentStories = [
+    {
+      name: "Kimberly",
+      college: "Stanford University",
+      image: "/lovable-uploads/2f7e0f7a-be5d-4ba2-b53d-9f9d44d4a63e.png",
+      review: "ABC helped me craft an authentic story that truly represented who I am."
+    },
+    {
+      name: "Leon",
+      college: "University of Pennsylvania",
+      image: "/lovable-uploads/04c7e99d-25ee-4239-bfd0-79fda79b66ce.png",
+      review: "From day one, we partnered closely, refining essays line by line."
+    },
+    {
+      name: "Ayush",
+      college: "Northeastern University",
+      image: "/lovable-uploads/ce68d2e8-17b6-4b92-8f81-bb131c07e312.png",
+      review: "Through Long-Term Consulting, I launched a club and developed investment projects."
+    }
+  ];
+
   const colleges = [
-    "Stanford", "Duke", "Princeton", "UPenn", "UC Berkeley", "UCLA", "Northwestern", 
-    "UMich", "Dartmouth", "NYU", "USC", "Amherst", "Georgia Tech"
+    {
+      name: "Stanford",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/500px-Seal_of_Leland_Stanford_Junior_University.svg.png"
+    },
+    {
+      name: "Duke",
+      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Duke_University_seal.svg/360px-Duke_University_seal.svg.png"
+    },
+    {
+      name: "Princeton",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Princeton_seal.svg/320px-Princeton_seal.svg.png"
+    },
+    {
+      name: "UPenn",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UPenn_shield_with_banner.svg/250px-UPenn_shield_with_banner.svg.png"
+    },
+    {
+      name: "UC Berkeley",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png"
+    },
+    {
+      name: "UCLA",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/The_University_of_California_UCLA.svg/1200px-The_University_of_California_UCLA.svg.png"
+    },
+    {
+      name: "Northwestern",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Northwestern_University_seal.svg/1200px-Northwestern_University_seal.svg.png"
+    },
+    {
+      name: "UMich",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Seal_of_the_University_of_Michigan.svg/360px-Seal_of_the_University_of_Michigan.svg.png"
+    },
+    {
+      name: "NYU",
+      logo: "https://yt3.ggpht.com/-RZYi5isxH_M/AAAAAAAAAAI/AAAAAAAAAAA/rmWpoe2qZzI/s900-c-k-no/photo.jpg"
+    },
+    {
+      name: "USC",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/University_of_Southern_California_%28USC%29_seal.svg/1200px-University_of_Southern_California_%28USC%29_seal.svg.png"
+    },
+    {
+      name: "Amherst",
+      logo: "https://www.amherst.edu/system/files/media/Amherst-College-seal-purple-stomp-575px.png"
+    },
+    {
+      name: "Georgia Tech",
+      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Georgia_Tech%27s_Buzz_logo.svg/1200px-Georgia_Tech%27s_Buzz_logo.svg.png"
+    }
   ];
 
   return (
@@ -134,66 +205,67 @@ const OnePager = () => {
         </div>
       </div>
 
-      {/* Success Stories & Colleges */}
-      <div className="grid grid-cols-2 gap-6 mb-8">
-        <div>
-          <h3 className="text-xl font-bold mb-3 text-[#f89cb0]">REAL PEOPLE, REAL RESULTS</h3>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3">
+      {/* Page Break for Print */}
+      <div className="print:break-before-page"></div>
+
+      {/* Success Stories */}
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold mb-6 text-[#f89cb0] text-center">REAL PEOPLE, REAL RESULTS</h3>
+        <div className="grid grid-cols-3 gap-6 mb-8">
+          {studentStories.map((student, index) => (
+            <div key={index} className="text-center">
               <img 
-                src="/lovable-uploads/2f7e0f7a-be5d-4ba2-b53d-9f9d44d4a63e.png" 
-                alt="Stanford Student" 
-                className="w-12 h-12 rounded-full object-cover"
+                src={student.image} 
+                alt={`${student.name} at ${student.college}`} 
+                className="w-24 h-24 rounded-full object-cover mx-auto mb-3"
               />
-              <div>
-                <p className="text-sm font-medium">Kimberly</p>
-                <p className="text-xs text-[#f89cb0]">Stanford University</p>
-              </div>
+              <h4 className="font-bold text-lg">{student.name}</h4>
+              <p className="text-sm text-[#f89cb0] font-medium mb-2">{student.college}</p>
+              <p className="text-xs text-gray-600 italic">"{student.review}"</p>
             </div>
-            <div className="flex items-center gap-3">
-              <img 
-                src="/lovable-uploads/04c7e99d-25ee-4239-bfd0-79fda79b66ce.png" 
-                alt="UPenn Student" 
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <p className="text-sm font-medium">Leon</p>
-                <p className="text-xs text-[#f89cb0]">University of Pennsylvania</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <img 
-                src="/lovable-uploads/ce68d2e8-17b6-4b92-8f81-bb131c07e312.png" 
-                alt="Northeastern Student" 
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <p className="text-sm font-medium">Ayush</p>
-                <p className="text-xs text-[#f89cb0]">Northeastern University</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div>
-          <h3 className="text-xl font-bold mb-3 text-[#f89cb0]">COLLEGE ACCEPTANCES</h3>
-          <div className="grid grid-cols-3 gap-2 text-xs">
-            {colleges.map((college, index) => (
-              <div key={index} className="bg-gray-100 px-2 py-1 rounded text-center">
-                {college}
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Testimonial Quote */}
-      <div className="bg-[#f89cb0]/10 p-4 rounded-lg mb-6 text-center">
-        <p className="text-sm italic mb-2">
+      {/* College Logos */}
+      <div className="mb-8">
+        <h3 className="text-xl font-bold mb-4 text-[#f89cb0] text-center">COLLEGE ACCEPTANCES</h3>
+        <div className="grid grid-cols-6 gap-3">
+          {colleges.map((college, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-white p-1 rounded-full shadow-sm flex items-center justify-center">
+                <img 
+                  src={college.logo} 
+                  alt={`${college.name} logo`} 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="text-xs text-center mt-1 font-medium">{college.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Featured Testimonial */}
+      <div className="bg-[#f89cb0]/10 p-6 rounded-lg mb-8 text-center">
+        <p className="text-base italic mb-3 font-medium">
           "When our internet connection went down at 10pm the night of the Duke ED deadline, 
           Astha answered my text within 15 minutes and submitted the application for us."
         </p>
-        <p className="text-xs font-medium">— The Subedi Family</p>
+        <p className="text-sm font-bold">— The Subedi Family</p>
+        <p className="text-xs text-gray-600">Duke University Early Decision Acceptance</p>
+      </div>
+
+      {/* Additional Student Reviews */}
+      <div className="grid grid-cols-2 gap-4 mb-8">
+        <div className="bg-gray-50 p-4 rounded">
+          <p className="text-sm italic mb-2">"ABC helped me discover my authentic voice and turn my passion into a compelling story."</p>
+          <p className="text-xs font-medium">— Student, UC Berkeley</p>
+        </div>
+        <div className="bg-gray-50 p-4 rounded">
+          <p className="text-sm italic mb-2">"The personalized approach made all the difference. I felt supported every step of the way."</p>
+          <p className="text-xs font-medium">— Student, Northwestern</p>
+        </div>
       </div>
 
       {/* Contact Section */}
@@ -202,7 +274,7 @@ const OnePager = () => {
         <p className="text-sm mb-4">
           Trusted by families in Silicon Valley, North Carolina, and abroad
         </p>
-        <div className="flex justify-center items-center gap-6">
+        <div className="flex justify-center items-center gap-8">
           <div className="text-sm">
             <p className="font-medium">Book a Free Consultation</p>
             <p className="text-gray-600">calendly.com/asthabhandari/quick-chat</p>
