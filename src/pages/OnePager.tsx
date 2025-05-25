@@ -160,7 +160,7 @@ const OnePager = () => {
         <div className="col-span-2">
           <h2 className="text-2xl font-bold mb-3 text-[#f89cb0]">WHO WE ARE</h2>
           <p className="text-sm leading-relaxed mb-3">
-            <strong>ABC was founded by Astha Bhandari</strong> — the proud daughter of immigrants who 
+            <strong>, ABC, Astha Bhandari Consulting, was founded by Astha Bhandari</strong> — the proud daughter of immigrants who 
             <strong> cracked the code of elite college admissions</strong> with no legacy status, 
             no private consultants, and no family blueprint to follow.
           </p>
