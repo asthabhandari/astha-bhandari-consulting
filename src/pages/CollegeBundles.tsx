@@ -67,7 +67,7 @@ const CollegeBundles: React.FC = () => {
 const PACKAGES = [
     {
       name: "Lite Package",
-      price: "$2,500",
+      price: "",
       bestFor: "Self-motivated students applying ED to a dream school",
       features: [
         "2 strategy meetings",
@@ -79,13 +79,13 @@ const PACKAGES = [
     },
     {
       name: "Core Package",
-      price: "$6,950",
-      note: "($6,200 w/ friend)",
+      price: "",
+      note: "",
       bestFor: "Students needing a comprehensive plan for multiple applications",
       features: [
         "6 strategy meetings",
-        "Common App essay (6 rounds)",
-        "7+ supplemental essays (6 rounds each)",
+        "Common App essay",
+        "7+ supplemental essays (4 rounds each)",
         "Activities + awards editing",
         "Brag sheet & recommenders"
       ],
@@ -93,7 +93,7 @@ const PACKAGES = [
     },
     {
       name: "Premium Package",
-      price: "$11,500",
+      price: "",
       bestFor: "Families wanting 24/7 expert access and end-to-end support",
       features: [
         "10+ strategy meetings + direct access",
@@ -112,7 +112,7 @@ const PACKAGES = [
 
   const sections = [
     {
-      title: "COLLEGE ESSAY PACKAGES - UPDATED",
+      title: "COLLEGE ESSAY PACKAGES",
       content: (
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {PACKAGES.map((pkg) => (
